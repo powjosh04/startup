@@ -1,4 +1,4 @@
-# Your startup name here
+# My Fishing Log
 
 [My Notes](notes.md)
 
