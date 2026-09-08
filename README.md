@@ -14,7 +14,7 @@ This part of my deliverable will describe what my application is supposed to do 
 
 ### Elevator pitch
 
-Fishermen absolutely love talking about their hobby, but what if there was a convenient way for them to track and share their experiences? My Fishing Log is a place where they can log their trips. This includes pictures, location, time, amount of fish caught, and weather. Once logged they can share it with their friends and family. Keeping their memories in a easy and convenient place for years to come!
+Fishermen absolutely love talking about their hobby, but what if there was a convenient way for them to track and share their experiences? My Fishing Log is a place where they can log their trips. This includes pictures, location, time, amount of fish caught, and weather. Once logged they can share it with their friends and family. Keeping their memories in a convenient place for years to come!
 ### Design
 
 ![Design image](placeholder.png)
