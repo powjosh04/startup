@@ -43,12 +43,12 @@ sequenceDiagram
 
 I am going to use the required technologies in the following ways.
 
-- **HTML** - Description here
-- **CSS** - Description here
-- **React** - Description here
-- **Service** - Description here
-- **DB/Login** - Description here
-- **WebSocket** - Description here
+- **HTML** - Correct HTML structure. Three different views. A log in view, feed view, and about view.
+- **CSS** - Good styling and my application will fit on different sizes of screens.
+- **React** - App registration, user upload and posting of events, deletion of events, and allow users to switch between views.
+- **Service** - A database the stores user information and event information. Call to an API to generate random image of students or food on about page.
+- **DB/Login** - Stores login information and events.
+- **WebSocket** - Relay of information from one device to another and vice versa.
 
 ## 🚀 Specification Deliverable
 
@@ -58,10 +58,10 @@ I am going to use the required technologies in the following ways.
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
 - [x] I completed the prerequisites for this deliverable (Git commit requirement)
-- [ ] Proper use of Markdown
+- [x] Proper use of Markdown
 - [x] A concise and compelling elevator pitch
 - [x] Description of key features
-- [ ] Description of how you will use each technology including your 3rd party API and use of WebSocket
+- [x] Description of how you will use each technology including your 3rd party API and use of WebSocket
 - [x] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
 
 ## 🚀 AWS deliverable
