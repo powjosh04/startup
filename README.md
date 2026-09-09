@@ -1,3 +1,4 @@
+<img width="4284" height="5712" alt="IMG_0128" src="https://github.com/user-attachments/assets/cf8b290d-4aa7-49ef-9427-d74604b96b65" />
 # Campus Food App
 
 [My Notes](notes.md)
@@ -18,7 +19,8 @@ When going to school the last thing students want to worry about is the cost of 
 
 ### Design
 
-![Design image](placeholder.png)
+![Design image](<img width="4284" height="5712" alt="IMG_0128" src="https://github.com/user-attachments/assets/38efa415-b835-4cff-a6c8-461b2f8b9bde" />, <img width="4284" height="5712" alt="IMG_0128" src="https://github.com/user-attachments/assets/c2107155-3a13-4c90-b1a8-aa6e7b0dcd4e" />, <img width="4284" height="5712" alt="IMG_0126" src="https://github.com/user-attachments/assets/6e39e247-eb91-4611-a43a-2129d89c79cd" />
+)
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
