@@ -7,12 +7,6 @@ As I college student it is always great to be able to find free food and events 
 
 Below will describle part of my deliverable is, what it is supposed to do, and the technologies that it will use.
 
-> [!NOTE]
-> This is a template for your startup application. You must modify this `README.md` file for each phase of your development. You only need to fill in the section for each deliverable when that deliverable is submitted in Canvas. Without completing the section for a deliverable, the TA will not know what to look for when grading your submission. Feel free to add additional information to each deliverable description, but make sure you at least have the list of rubric items and a description of what you did for each item.
-
-> [!NOTE]
-> If you are not familiar with Markdown then you should review the [documentation](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) before continuing.
-
 ### Elevator pitch
 
 When going to school the last thing students want to worry about is the cost of food. With the Food and Events app students will be able to track the location of free meals and events around campus. Helping students to not only stay full physically but also socially as they attend events with their friends and meet new people! This app will help students track local campus events in real time so that they can check whenever and wherever they are! 
@@ -23,7 +17,7 @@ When going to school the last thing students want to worry about is the cost of 
 , <img width="180" height="320" alt="IMG_0128" src="https://github.com/user-attachments/assets/c2107155-3a13-4c90-b1a8-aa6e7b0dcd4e" />, <img width="180" height="320" alt="IMG_0126" src="https://github.com/user-attachments/assets/6e39e247-eb91-4611-a43a-2129d89c79cd" />
 )
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+The sequence diagram below shows the technology sequence as the app is interacted with.
 
 ```mermaid
 sequenceDiagram
