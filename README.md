@@ -14,7 +14,8 @@ Below will describle part of my deliverable is, what it is supposed to do, and t
 
 ### Elevator pitch
 
-Fishermen absolutely love talking about their hobby, but what if there was a convenient way for them to track and share their experiences? My Fishing Log is a place where they can log their trips. This includes pictures, location, time, amount of fish caught, and weather. Once logged they can share it with their friends and family. Keeping their memories in a convenient place for years to come!
+When going to school the last thing students want to worry about is the cost of food. With the Food and Events app students will be able to track the location of free meals and events around campus. Helping students to not only stay full physically but also socially as they attend events with their friends and meet new people! This app will help students track local campus events in real time so that they can check whenever and wherever they are! 
+
 ### Design
 
 ![Design image](placeholder.png)
@@ -30,9 +31,10 @@ sequenceDiagram
 
 ### Key features
 
-- Describe your key feature
-- Describe your key feature
-- Describe your key feature
+- Secure log in and log out
+- Database of current events
+- Upload the location and a picture of a campus event
+- Report when an event runs out of food or has ended to remove event
 
 ### Technologies
 
@@ -52,9 +54,9 @@ I am going to use the required technologies in the following ways.
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] I completed the prerequisites for this deliverable (Git commit requirement)
+- [x] I completed the prerequisites for this deliverable (Git commit requirement)
 - [ ] Proper use of Markdown
-- [ ] A concise and compelling elevator pitch
+- [x] A concise and compelling elevator pitch
 - [ ] Description of key features
 - [ ] Description of how you will use each technology including your 3rd party API and use of WebSocket
 - [ ] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
