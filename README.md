@@ -27,9 +27,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ```mermaid
 sequenceDiagram
-    actor You
-    actor Website
-    You->>Website: Replace this with your design
+    actor User
+    User ->> Login: Enter login information
+    Login ->>Feed: See events
+    Feed ->>About: See information
+    Feed->>Feed: user uploads event
+    Feed->>Feed: user removes event
+    Feed->>Feed: updates events
+    Feed -->>Login: Login
+    About->>About: API to generate image
+    About -->>Login: Login
 ```
 
 ### Key features
