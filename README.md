@@ -35,8 +35,8 @@ sequenceDiagram
 
 ### Key features
 
-- Secure log in and log out
-- Database of current events
+- Secure log in, log out, and register.
+- Database of current events updated by websocket
 - Upload the location and a picture of a campus event
 - Report when an event runs out of food or has ended to remove event
 
