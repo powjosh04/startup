@@ -13,7 +13,7 @@ When going to school the last thing students want to worry about is the cost of 
 
 ### Design
 
-![Draft image 1.](IMG_0125(1).jpeg)
+![Draft image 1.](IMG_0125.jpeg)
 ![Draft image 2.](IMG_0128.jpeg)
 ![Draft image 3.](IMG_0129.jpeg)
 
