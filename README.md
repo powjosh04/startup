@@ -58,12 +58,12 @@ I am going to use the required technologies in the following ways.
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [x] I completed the prerequisites for this deliverable (Git commit requirement)
-- [x] Proper use of Markdown
-- [x] A concise and compelling elevator pitch
-- [x] Description of key features
-- [x] Description of how you will use each technology including your 3rd party API and use of WebSocket
-- [x] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
+- [x] I completed the prerequisites for this deliverable (Git commit requirement). - I have done 34 commits over the last 3 days.
+- [x] Proper use of Markdown. - I studied markdown formatting and did my best to use it properly.
+- [x] A concise and compelling elevator pitch. - I created an elevator pitch stating what my application is and some of its purposes. 
+- [x] Description of key features. - I described key features of the application I want to make.
+- [x] Description of how you will use each technology including your 3rd party API and use of WebSocket. - I described my use of all the technologies including websocket to update the feed of my application and a 3rd party API to generate images.
+- [x] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references. - I included 3 images that I drew by hand as rough sketches of my application.
 
 ## 🚀 AWS deliverable
 
