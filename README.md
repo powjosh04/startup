@@ -58,7 +58,7 @@ I am going to use the required technologies in the following ways.
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [x] I completed the prerequisites for this deliverable (Git commit requirement). - I have done 34 commits over the last 3 days.
+- [x] I completed the prerequisites for this deliverable (Git commit requirement). - I have done 35 commits over the last 3 days.
 - [x] Proper use of Markdown. - I studied markdown formatting and did my best to use it properly.
 - [x] A concise and compelling elevator pitch. - I created an elevator pitch stating what my application is and some of its purposes. 
 - [x] Description of key features. - I described key features of the application I want to make.
