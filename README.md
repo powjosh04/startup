@@ -1,5 +1,5 @@
 
-# Student Sustenance (Campus Food App)
+# Student Sustenance (Campus Food and Event App)
 
 [My Notes](notes.md)
 
