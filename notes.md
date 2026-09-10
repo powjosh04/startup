@@ -7,8 +7,7 @@ This file represents what I have learned about web programming.
 - [My startup](https://startup.cs260.click)
 - [My simon](https://simon.cs260.click)
 - [Markdown syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
--I learned about mermaid in markdown. It allows you to create a backend flowchart.
-- ```mermaid
+-I learned about mermaid in markdown. It allows you to create a backend flowchart. " ```mermaid
 sequenceDiagram
     actor User
     User ->> Login: Enter login information
@@ -20,7 +19,7 @@ sequenceDiagram
     Feed -->>Login: Login
     About->>About: API to generate image
     About -->>Login: Login
-```
+``` "
 
 ## Helpful links
 
