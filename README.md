@@ -47,7 +47,7 @@ I am going to use the required technologies in the following ways.
 - **HTML** - Correct HTML structure. Three different views. A log in view, feed view, and about view.
 - **CSS** - Good styling. Application will fit on a variety of different sizes of screens.
 - **React** - App registration. Upload, post, and delete events. Switch views.
-- **Service** - A database that stores user and event information. Call to a third party API to generate random image of students or food on about page.
+- **Service** - A database that stores user and event information. Call to a third party API to generate random image of food on about page through https://foodish-api.com/api/
 - **DB/Login** - Stores login information and events.
 - **WebSocket** - Live relay of event information from one device to another.
   
