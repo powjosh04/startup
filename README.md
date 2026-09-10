@@ -1,15 +1,15 @@
 
-# Campus Food App
+# Student Sustenance (Campus Food App)
 
 [My Notes](notes.md)
 
-As I college student it is always great to be able to find free food and events around campus. It not only helps keep us students physically fed, but keeps us socially fed as we go with our friends and meet new people. For my startup I would like to make an app where students can share the location of free food and events they find around campus. They will be able to upload a picture and location of the food/event and then other students will have the ability to upvote it and mark whether the food is still available or not. This will help students stay fed and enjoy their time on campus more fully. 
+As I college student it is always great to be able to find free food and events around campus. It not only helps keep us physically fed, but also socially fed as we go with our friends and meet new people. For my startup I would like to make an application where students can share the location of free food and events they find around campus. Once completed, students will be able to upload a picture and location of any event around campus. Then other students will be able to see the location of the event on a campus wide feed and be able to remove it once it is over. This will help students stay fed and help build community and knowledge of events all around campus. 
 
-Below will describle part of my deliverable is, what it is supposed to do, and the technologies that it will use.
+The sections below will describe what my application is, what it is supposed to do, and the technologies that it will use.
 
 ### Elevator pitch
 
-When going to school the last thing students want to worry about is the cost of food. With the Food and Events app students will be able to track the location of free meals and events around campus. Helping students to not only stay full physically but also socially as they attend events with their friends and meet new people! This app will help students track local campus events in real time so that they can check whenever and wherever they are! 
+When going to school the last thing students want to worry about is the cost of food. Now imagine if there was an app that was always updated with free food and event information all around campus. The Student Sustenance app will be able to help students conveniently track the location of free meals and events around campus in real time. Helping students to not only stay physically full but also socially as they attend events with their friends and meet new people! 
 
 ### Design
 
@@ -47,7 +47,7 @@ I am going to use the required technologies in the following ways.
 - **HTML** - Correct HTML structure. Three different views. A log in view, feed view, and about view.
 - **CSS** - Good styling and my application will fit on different sizes of screens.
 - **React** - App registration, user upload and posting of events, deletion of events, and allow users to switch between views.
-- **Service** - A database the stores user information and event information. Call to an API to generate random image of students or food on about page.
+- **Service** - A database that stores user and event information. Call to an API to generate random image of students or food on about page.
 - **DB/Login** - Stores login information and events.
 - **WebSocket** - Live relay of event information from one device to another.
   
