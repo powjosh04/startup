@@ -15,7 +15,7 @@ When going to school the last thing students want to worry about is the cost of 
 
 ![Draft image 1.](IMG_0125(1).jpeg)
 ![Draft image 2.](IMG_0128.jpeg)
-![Draft image 3.](IMG_0126.jpeg)
+![Draft image 3.](IMG_0129.jpeg)
 
 The sequence diagram below shows the applications backend as the users interact with it.
 
