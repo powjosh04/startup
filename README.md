@@ -13,9 +13,9 @@ When going to school the last thing students want to worry about is the cost of 
 
 ### Design
 
-<img width="180" height="320" alt="IMG_0125 (1)" src="https://github.com/user-attachments/assets/443300ee-a968-4942-b020-4f48ddf2daa8" />)
-<img width="180" height="320" alt="IMG_0128" src="https://github.com/user-attachments/assets/c2107155-3a13-4c90-b1a8-aa6e7b0dcd4e" />
-<img width="180" height="320" alt="IMG_0126" src="https://github.com/user-attachments/assets/6e39e247-eb91-4611-a43a-2129d89c79cd" />
+![Draft image 1.](IMG_0125(1).jpeg)
+![Draft image 2.](IMG_0128.jpeg)
+![Draft image 3.](IMG_0126.jpeg)
 
 The sequence diagram below shows the applications backend as the users interact with it.
 
