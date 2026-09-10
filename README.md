@@ -50,6 +50,7 @@ I am going to use the required technologies in the following ways.
 - **Service** - A database the stores user information and event information. Call to an API to generate random image of students or food on about page.
 - **DB/Login** - Stores login information and events.
 - **WebSocket** - Live relay of event information from one device to another.
+  
 ## 🚀 Specification Deliverable
 
 > [!NOTE]
