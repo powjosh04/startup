@@ -3,7 +3,7 @@
 
 [My Notes](notes.md)
 
-As I college student it is always great to be able to find free food and events around campus. It not only helps keep us physically fed, but also socially fed as we go with our friends and meet new people. For my startup I would like to make an application where students can share the location of free food and events they find around campus. Once completed, students will be able to upload a picture and location of any event around campus. Then other students will be able to see the location of the event on a campus wide feed and be able to remove it once it is over. This will help students stay fed and help build community and knowledge of events all around campus. 
+As a college student it is always great to be able to find free food and events around campus. It not only helps keep us physically fed, but also socially fed as we go with our friends and meet new people. For my startup I would like to make an application where students can share the location of free food and events they find around campus. Once completed, students will be able to upload a picture and location of any event around campus. Then other students will be able to see the location of the event on a campus wide feed and be able to remove it once it is over. This will help students stay fed and help build community and knowledge of events all around campus. 
 
 The sections below will describe what my application is, what it is supposed to do, and the technologies that it will use.
 
@@ -17,7 +17,7 @@ When going to school the last thing students want to worry about is the cost of 
 , <img width="180" height="320" alt="IMG_0128" src="https://github.com/user-attachments/assets/c2107155-3a13-4c90-b1a8-aa6e7b0dcd4e" />, <img width="180" height="320" alt="IMG_0126" src="https://github.com/user-attachments/assets/6e39e247-eb91-4611-a43a-2129d89c79cd" />
 )
 
-The sequence diagram below shows the technology sequence as the app is interacted with.
+The sequence diagram below shows the applications backend as the users interact with it.
 
 ```mermaid
 sequenceDiagram
@@ -36,8 +36,7 @@ sequenceDiagram
 ### Key features
 
 - Secure log in, log out, and registration
-- Database of current events updated in real time by websocket
-- View current campus events
+- View campus events in real time
 - Upload the location and a picture of current campus events
 - Remove when it has ended
 
