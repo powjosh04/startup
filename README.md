@@ -35,19 +35,20 @@ sequenceDiagram
 
 ### Key features
 
-- Secure log in, log out, and register.
-- Database of current events updated by websocket
-- Upload the location and a picture of a campus event
-- Report when an event runs out of food or has ended to remove event
+- Secure log in, log out, and registration
+- Database of current events updated in real time by websocket
+- View current campus events
+- Upload the location and a picture of current campus events
+- Remove when it has ended
 
 ### Technologies
 
 I am going to use the required technologies in the following ways.
 
 - **HTML** - Correct HTML structure. Three different views. A log in view, feed view, and about view.
-- **CSS** - Good styling and my application will fit on different sizes of screens.
-- **React** - App registration, user upload and posting of events, deletion of events, and allow users to switch between views.
-- **Service** - A database that stores user and event information. Call to an API to generate random image of students or food on about page.
+- **CSS** - Good styling. Application will fit on a variety of different sizes of screens.
+- **React** - App registration. Upload, post, and delete events. Switch views.
+- **Service** - A database that stores user and event information. Call to a third party API to generate random image of students or food on about page.
 - **DB/Login** - Stores login information and events.
 - **WebSocket** - Live relay of event information from one device to another.
   
