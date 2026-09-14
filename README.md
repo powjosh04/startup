@@ -71,7 +71,7 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 - [x] **Rented EC2 server** - I did this part on 9/13.
 - [x] **Leased domain name** - I completed this on 9/14.
-- [ ] **Server accessible** from my domain: [https://yourdomainnamehere.click](https://yourdomainnamehere.click) - I did not complete this part of the deliverable.
+- [x] **Server accessible** from my domain: [[https://yourdomainnamehere.click](https://yourdomainnamehere.click](https://powellcs260startup.click/)) - I completed this part on 9/14.
 
 ## 🚀 HTML deliverable
 
