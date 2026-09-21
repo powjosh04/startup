@@ -33,6 +33,9 @@ Interesting things I have learned about AWS
 
 ## HTML
 
+9/21/26
+I learned how to deploy to get hub through commands
+
 Interesting things I have learned about HTML
 
 ## React
