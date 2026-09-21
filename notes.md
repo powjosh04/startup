@@ -36,7 +36,8 @@ Interesting things I have learned about AWS
 9/21/26
 I learned how to deploy to get hub through commands
 
-Interesting things I have learned about HTML
+Interesting things I have learned about HTML.
+Spent 3 hours in TA office debugging and figuring out simon.html and uploading it to my website
 
 ## React
 
