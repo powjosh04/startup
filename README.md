@@ -77,16 +77,18 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] I completed the prerequisites for this deliverable (Simon deployed, GitHub link, Git commits)
-- [ ] **HTML pages** - I did not complete this part of the deliverable.
-- [ ] **Proper HTML element usage** - I did not complete this part of the deliverable.
-- [ ] **Links** - I did not complete this part of the deliverable.
-- [ ] **Text** - I did not complete this part of the deliverable.
-- [ ] **3rd party API placeholder** - I did not complete this part of the deliverable.
-- [ ] **Images** - I did not complete this part of the deliverable.
-- [ ] **Login placeholder** - I did not complete this part of the deliverable.
-- [ ] **DB data placeholder** - I did not complete this part of the deliverable.
-- [ ] **WebSocket placeholder** - I did not complete this part of the deliverable.
+- [x] I completed the prerequisites for this deliverable (Simon deployed, GitHub link, Git commits) - I have committed at least 13 times for this deliverable
+- [x] **HTML pages** - There 3 login, feed, and about pages.
+- [x] **Proper HTML element usage** - I used proper html on all 3 pages.
+- [x] **Links** - The links between pages work and to my github.
+- [x] **Text** - There is textual content on about page.
+- [x] **3rd party API placeholder** - There is a food api placeholder on the about page.
+- [x] **Images** - There are placeholder images on the food feed pages.
+- [x] **Login placeholder** - Login placeholder on the first page.
+- [x] **DB data placeholder** - There is a current food page that will pull from a database with the option to remove under each post and add at the bottom of the page.
+- [x] **WebSocket placeholder** - The current event page will update in real time as users add and remove events
+
+[[https://startup.powellcs260startup.click](https://startup.powellcs260startup.click/)] 
 
 ## 🚀 CSS deliverable
 
