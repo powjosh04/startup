@@ -84,18 +84,18 @@
         <section>
             <h2>Add New Food Event</h2>
 
-            <form>
+            <form method="post" action="feed.html">
                 <label for="event-image">Upload Image:</label><br />
-                <input type="file" id="event-image" name="event-image" /><br /><br />
+                <input type="file" id="event-image" name="event-image" accept="image/*" required /><br /><br />
 
                 <label for="event-location">Location:</label><br />
-                <input type="text" id="event-location" name="event-location" /><br /><br />
+                <input type="text" id="event-location" name="event-location" required /><br /><br />
 
                 <label for="event-description">Description:</label><br />
-                <textarea id="event-description" name="event-description"></textarea><br /><br />
+                <textarea id="event-description" name="event-description" required></textarea><br /><br />
 
-                <button type="submit">Add Event</button>
-            </form>
+    <button type="submit">Add Event</button>
+</form>
         </section>
 
     </main>
