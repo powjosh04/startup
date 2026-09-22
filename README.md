@@ -88,6 +88,8 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [x] **DB data placeholder** - There is a current food page that will pull from a database with the option to remove under each post and add at the bottom of the page.
 - [x] **WebSocket placeholder** - The current event page will update in real time as users add and remove events
 
+[[https://startup.powellcs260startup.click](https://startup.powellcs260startup.click/)] 
+
 ## 🚀 CSS deliverable
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
