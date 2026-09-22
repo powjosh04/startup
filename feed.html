@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Feed - Student Sustenance</title>
+    <link rel="icon" href="favicon.ico" />
+</head>
+
+<body>
+
+    <!-- HEADER + NAV -->
+    <header>
+        <h1>Student Sustenance</h1>
+        <p>Helping students find food and other resources on campus.</p>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Login</a></li>
+                <li><a href="feed.html">Food Feed</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+        <hr />
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- DATABASE PLACEHOLDER -->
+        <section>
+            <h2>Current Food Events</h2>
+            <p>
+                These posts represent items stored in the database. 
+                Users will be able to remove events once the food is gone.
+            </p>
+        </section>
+
+        <!-- EXAMPLE POSTS -->
+        <section>
+
+            <article>
+                <h3>Pizza in Engineering Building</h3>
+                <img src="placeholder.png" alt="Pizza" />
+                <p>Leftover slices from the robotics club meeting.</p>
+                <p><strong>Location:</strong> Engineering Building, Room 210</p>
+                <button type="button">Remove Event</button>
+            </article>
+
+            <article>
+                <h3>Bagels in Library</h3>
+                <img src="placeholder.png" alt="Bagels" />
+                <p>Free bagels from a study group.</p>
+                <p><strong>Location:</strong> Library, 2nd Floor</p>
+                <button type="button">Remove Event</button>
+            </article>
+
+            <article>
+                <h3>Fruit Cups in Student Center</h3>
+                <img src="placeholder.png" alt="Fruit cups" />
+                <p>Healthy snacks left after a wellness workshop.</p>
+                <p><strong>Location:</strong> Student Center Lobby</p>
+                <button type="button">Remove Event</button>
+            </article>
+
+        </section>
+
+        <hr />
+
+        <!-- ADD EVENT PLACEHOLDER -->
+        <section>
+            <h2>Add New Food Event</h2>
+            <p>This form will allow users to upload new food events.</p>
+
+            <form>
+                <label for="event-image">Upload Image:</label><br />
+                <input type="file" id="event-image" name="event-image" /><br /><br />
+
+                <label for="event-location">Location:</label><br />
+                <input type="text" id="event-location" name="event-location" /><br /><br />
+
+                <label for="event-description">Description:</label><br />
+                <textarea id="event-description" name="event-description"></textarea><br /><br />
+
+                <button type="submit">Add Event</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <hr />
+        <span>Josh Powell</span><br />
+        <a href="https://github.com/powjosh04/startup/">GitHub</a>
+    </footer>
+
+</body>
+</html>
