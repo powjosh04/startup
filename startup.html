@@ -1,29 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
-    <!-- Tell browsers not to scale the viewport automatically -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Student Sustanence</title>
+    <title>Student Sustenance</title>
     <link rel="icon" href="favicon.ico" />
-  </head>
-  <body>
-    <header>
-      <h1>Student Sustanence</h1>
-    </header>
-    <main>
-      <p>
-        This is a project I made to help students find food and other
-        sustanence. It is a work in progress, but I hope to add more features
-        in the future.
-      </p>
-    </body>
+</head>
 
-  <footer>
-      <hr />
-      <span class="text-reset">Josh Powell</span>
-      <br />
-      <a href="https://github.com/powjosh04/startup/">GitHub</a>
+<body>
+
+    <!-- HEADER + NAV -->
+    <header>
+        <h1>Student Sustenance</h1>
+        <p>Helping students find food and other resources on campus.</p>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Login</a></li>
+                <li><a href="feed.html">Food Feed</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+        <hr />
+    </header>
+  
+
+    <!-- MAIN CONTENT -->
+    <main>
+    <section>
+        <h2>Login</h2>
+
+        <form>
+            <label for="username">Username:</label><br />
+            <input type="text" id="username" name="username" /><br /><br />
+
+            <label for="password">Password:</label><br />
+            <input type="password" id="password" name="password" /><br /><br />
+
+            <div>
+                <button type="submit">Login</button>
+                <button type="button">Register</button>
+            </div>
+        </form>
+    </section>
+</main>
+
+    <!-- FOOTER -->
+    <footer>
+        <hr />
+        <span>Josh Powell</span><br />
+        <a href="https://github.com/powjosh04/startup/">GitHub</a>
     </footer>
-  </body>
+
+</body>
 </html>
