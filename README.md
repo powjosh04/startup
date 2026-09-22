@@ -77,7 +77,7 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [x] I completed the prerequisites for this deliverable (Simon deployed, GitHub link, Git commits).
+- [x] I completed the prerequisites for this deliverable (Simon deployed, GitHub link, Git commits) - I have committed at least 13 times for this deliverable
 - [x] **HTML pages** - There 3 login, feed, and about pages.
 - [x] **Proper HTML element usage** - I used proper html on all 3 pages.
 - [x] **Links** - The links between pages work and to my github.
