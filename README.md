@@ -86,7 +86,7 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [x] **Images** - There are placeholder images on the food feed pages.
 - [x] **Login placeholder** - Login placeholder on the first page.
 - [x] **DB data placeholder** - There is a current food page that will pull from a database with the option to remove under each post and add at the bottom of the page.
-- [x] **WebSocket placeholder** - The current event page will update in real time as users add and remove events
+- [x] **WebSocket placeholder** - A section of the current event page will update in real time as users add and remove events
 
 [[https://startup.powellcs260startup.click](https://startup.powellcs260startup.click/)] 
 
