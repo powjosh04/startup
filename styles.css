@@ -12,11 +12,11 @@ main {
 
 /* ID selector */
 #username-display {
-  font-weight: bold;
-  color: #2A6FDB; /* primary color */
+  text-decoration: underline; /* clearly visible */
 }
 
 /* Pseudo selector */
 button:hover {
-  opacity: 0.9; /* subtle hover effect */
+  transform: scale(1.02); /* small zoom effect */
+  transition: transform 0.15s ease;
 }
