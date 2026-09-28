@@ -9,12 +9,6 @@ main {
   padding: 10px;
 }
 
-
-/* ID selector */
-#username-display {
-  text-decoration: underline; /* clearly visible */
-}
-
 /* Pseudo selector */
 button:hover {
   transform: scale(1.02); /* small zoom effect */
