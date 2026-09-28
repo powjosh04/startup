@@ -1,0 +1,22 @@
+/* Element selector */
+main {
+  padding-bottom: 20px;
+}
+
+/* Class selector */
+.card {
+  border: 1px solid #1ABC9C;
+  padding: 10px;
+}
+
+
+/* ID selector */
+#username-display {
+  font-weight: bold;
+  color: #2A6FDB; /* primary color */
+}
+
+/* Pseudo selector */
+button:hover {
+  opacity: 0.9; /* subtle hover effect */
+}

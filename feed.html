@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Feed - Student Sustenance</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -14,145 +15,140 @@
                         accent: '#1ABC9C',
                         background: '#F5F7FA',
                         text: '#222222',
+                    }
+                }
+            }
         }
-      }
-    }
-  }
-</script>
-    <link rel="stylesheet" href="styles.css" />
+    </script>
 
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body>
+<body class="bg-background text-text">
 
-    <!-- HEADER + NAV -->
+    <!-- HEADER -->
     <header class="bg-primary text-white border-b-4 border-accent p-4">
-    <h1 class="text-3xl font-bold">Student Sustenance</h1>
-    <p class="text-background/80">Helping students find food and other resources on campus.</p>
+        <h1 class="text-3xl font-bold">Student Sustenance</h1>
+        <p class="text-background/80">Helping students find food and other resources on campus.</p>
 
-    <nav class="mt-4">
-        <ul class="flex gap-6">
-            <li><a href="index.html" class="hover:text-accent">Home/Login</a></li>
-            <li><a href="feed.html" class="hover:text-accent">Food Feed</a></li>
-            <li><a href="about.html" class="hover:text-accent">About</a></li>
-        </ul>
-    </nav>
-</header>
-
+        <nav class="mt-4">
+            <ul class="flex gap-6">
+                <li><a href="index.html" class="hover:text-accent">Home/Login</a></li>
+                <li><a href="feed.html" class="hover:text-accent">Food Feed</a></li>
+                <li><a href="about.html" class="hover:text-accent">About</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- MAIN CONTENT -->
-<main class="max-w-5xl mx-auto p-6">
+    <main class="max-w-5xl mx-auto p-6">
 
-    <!-- DATABASE PLACEHOLDER -->
-    <section class="mb-8">
-        <h2 class="text-2xl font-semibold text-primary mb-2">Current Food Events</h2>
-        <p class="text-text/80">
-            These posts represent items stored in the database. 
-            Users will be able to remove events once the food is gone.
-        </p>
-    </section>
+        <!-- DATABASE PLACEHOLDER -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold text-primary mb-2">Current Food Events</h2>
+            <p class="text-text/80">
+                These posts represent items stored in the database. 
+                Users will be able to remove events once the food is gone.
+            </p>
+        </section>
 
-    <!-- EXAMPLE POSTS GRID -->
-    <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <!-- EXAMPLE POSTS GRID -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
 
-        <!-- Post 1 -->
-        <article class="bg-white p-4 rounded shadow border-l-4 border-accent">
-            <h3 class="text-xl font-semibold mb-2">Pizza in Engineering Building</h3>
-            <img src="placeholder.png" alt="Free Leftover Pizza in box"
-                 class="w-full h-40 object-cover rounded mb-3" />
-            <p>Leftover slices from the robotics club meeting.</p>
-            <p class="font-medium mt-2"><strong>Location:</strong> Engineering Building, Room 210</p>
-            <button class="mt-3 bg-primary text-white px-3 py-1 rounded hover:bg-accent transition">
-                Remove Event
-            </button>
-        </article>
+            <!-- Post 1 -->
+            <article class="card bg-white p-4 rounded shadow border-l-4 border-accent">
+                <h3 class="text-xl font-semibold mb-2">Pizza in Engineering Building</h3>
+                <img src="placeholder.png" alt="Free Leftover Pizza in box"
+                     class="w-full h-40 object-cover rounded mb-3" />
+                <p>Leftover slices from the robotics club meeting.</p>
+                <p class="font-medium mt-2"><strong>Location:</strong> Engineering Building, Room 210</p>
+                <button class="mt-3 bg-primary text-white px-3 py-1 rounded hover:bg-accent transition">
+                    Remove Event
+                </button>
+            </article>
 
-        <!-- Post 2 -->
-        <article class="bg-white p-4 rounded shadow border-l-4 border-accent">
-            <h3 class="text-xl font-semibold mb-2">Bagels in Library</h3>
-            <img src="placeholder.png" alt="Free Bagels on table"
-                 class="w-full h-40 object-cover rounded mb-3" />
-            <p>Free bagels from a study group.</p>
-            <p class="font-medium mt-2"><strong>Location:</strong> Library, 2nd Floor</p>
-            <button class="mt-3 bg-primary text-white px-3 py-1 rounded hover:bg-accent transition">
-                Remove Event
-            </button>
-        </article>
+            <!-- Post 2 -->
+            <article class="card bg-white p-4 rounded shadow border-l-4 border-accent">
+                <h3 class="text-xl font-semibold mb-2">Bagels in Library</h3>
+                <img src="placeholder.png" alt="Free Bagels on table"
+                     class="w-full h-40 object-cover rounded mb-3" />
+                <p>Free bagels from a study group.</p>
+                <p class="font-medium mt-2"><strong>Location:</strong> Library, 2nd Floor</p>
+                <button class="mt-3 bg-primary text-white px-3 py-1 rounded hover:bg-accent transition">
+                    Remove Event
+                </button>
+            </article>
 
-        <!-- Post 3 -->
-        <article class="bg-white p-4 rounded shadow border-l-4 border-accent">
-            <h3 class="text-xl font-semibold mb-2">Fruit Cups in Student Center</h3>
-            <img src="placeholder.png" alt="Free Fruit Cups on table"
-                 class="w-full h-40 object-cover rounded mb-3" />
-            <p>Healthy snacks left after a wellness workshop.</p>
-            <p class="font-medium mt-2"><strong>Location:</strong> Student Center Lobby</p>
-            <button class="mt-3 bg-primary text-white px-3 py-1 rounded hover:bg-accent transition">
-                Remove Event
-            </button>
-        </article>
+            <!-- Post 3 -->
+            <article class="card bg-white p-4 rounded shadow border-l-4 border-accent">
+                <h3 class="text-xl font-semibold mb-2">Fruit Cups in Student Center</h3>
+                <img src="placeholder.png" alt="Free Fruit Cups on table"
+                     class="w-full h-40 object-cover rounded mb-3" />
+                <p>Healthy snacks left after a wellness workshop.</p>
+                <p class="font-medium mt-2"><strong>Location:</strong> Student Center Lobby</p>
+                <button class="mt-3 bg-primary text-white px-3 py-1 rounded hover:bg-accent transition">
+                    Remove Event
+                </button>
+            </article>
 
-    </section>
+        </section>
 
-    <!-- WEBSOCKET PLACEHOLDER -->
-    <section class="mb-12 bg-white p-4 rounded shadow border-l-4 border-accent">
-        <h2 class="text-xl font-semibold text-primary mb-2">Live Updates (WebSocket Placeholder)</h2>
-        <p class="text-text/80">
-            This section will display real-time notifications using WebSockets.
-            For example: “User123 just posted a bagel in the Library!”
-        </p>
-        <ul aria-live="polite" class="mt-3 list-disc list-inside text-text/70">
-            <li>[Live update messages will appear here]</li>
-        </ul>
-    </section>
+        <!-- WEBSOCKET PLACEHOLDER -->
+        <section class="mb-12 bg-white p-4 rounded shadow border-l-4 border-accent">
+            <h2 class="text-xl font-semibold text-primary mb-2">Live Updates (WebSocket Placeholder)</h2>
+            <p class="text-text/80">
+                This section will display real-time notifications using WebSockets.
+                For example: “User123 just posted a bagel in the Library!”
+            </p>
+            <ul aria-live="polite" class="mt-3 list-disc list-inside text-text/70">
+                <li>[Live update messages will appear here]</li>
+            </ul>
+        </section>
 
-    <!-- ADD EVENT FORM -->
-    <section class="bg-white p-6 rounded shadow border-l-4 border-accent">
-        <h2 class="text-2xl font-semibold text-primary mb-4">Add New Food Event</h2>
+        <!-- ADD EVENT FORM -->
+        <section class="bg-white p-6 rounded shadow border-l-4 border-accent">
+            <h2 class="text-2xl font-semibold text-primary mb-4">Add New Food Event</h2>
 
-        <form method="post" action="feed.html" class="space-y-4">
+            <form method="post" action="feed.html" class="space-y-4">
 
-            <div>
-                <label for="event-image" class="block font-medium">Upload Image:</label>
-                <input type="file" id="event-image" name="event-image" accept="image/*" required
-                       class="w-full border border-accent rounded p-2 bg-background" />
-            </div>
+                <div>
+                    <label for="event-image" class="block font-medium">Upload Image:</label>
+                    <input type="file" id="event-image" name="event-image" accept="image/*" required
+                           class="w-full border border-accent rounded p-2 bg-background" />
+                </div>
 
-            <div>
-                <label for="event-location" class="block font-medium">Location:</label>
-                <input type="text" id="event-location" name="event-location" required
-                       class="w-full border border-accent rounded p-2" />
-            </div>
+                <div>
+                    <label for="event-location" class="block font-medium">Location:</label>
+                    <input type="text" id="event-location" name="event-location" required
+                           class="w-full border border-accent rounded p-2" />
+                </div>
 
-            <div>
-                <label for="event-description" class="block font-medium">Description:</label>
-                <textarea id="event-description" name="event-description" required
-                          class="w-full border border-accent rounded p-2 h-32"
-                          placeholder="Describe the food, quantity left, and any time-sensitive details..."></textarea>
-            </div>
+                <div>
+                    <label for="event-description" class="block font-medium">Description:</label>
+                    <textarea id="event-description" name="event-description" required
+                              class="w-full border border-accent rounded p-2 h-32"
+                              placeholder="Describe the food, quantity left, and any time-sensitive details..."></textarea>
+                </div>
 
-            <button type="submit"
-                    class="w-full bg-primary text-white p-2 rounded hover:bg-accent transition">
-                Add Event
-            </button>
+                <button type="submit"
+                        class="w-full bg-primary text-white p-2 rounded hover:bg-accent transition">
+                    Add Event
+                </button>
 
-        </form>
-    </section>
+            </form>
+        </section>
 
-</main>
-
+    </main>
 
     <!-- FOOTER -->
     <footer class="text-center p-6 bg-background text-text">
-    <hr class="border-accent mb-4" />
-
-    <span class="font-semibold">Josh Powell</span><br />
-
-    <a href="https://github.com/powjosh04/startup/"
-       class="text-primary hover:text-accent font-medium">
-       GitHub
-    </a>
-</footer>
-
+        <hr class="border-accent mb-4" />
+        <span class="font-semibold">Josh Powell</span><br />
+        <a href="https://github.com/powjosh04/startup/"
+           class="text-primary hover:text-accent font-medium">
+           GitHub
+        </a>
+    </footer>
 
 </body>
 </html>
