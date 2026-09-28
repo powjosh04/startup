@@ -23,64 +23,66 @@
 
 </head>
 
-<body>
+<body class="bg-background text-text">
 
     <!-- HEADER + NAV -->
     <header class="bg-primary text-white border-b-4 border-accent p-4">
-    <h1 class="text-3xl font-bold">Student Sustenance</h1>
-    <p class="text-background/80">Helping students find food and other resources on campus.</p>
+        <h1 class="text-3xl font-bold">Student Sustenance</h1>
+        <p class="text-background/80">Helping students find food and other resources on campus.</p>
 
-    <nav class="mt-4">
-        <ul class="flex gap-6">
-            <li><a href="index.html" class="hover:text-accent">Home/Login</a></li>
-            <li><a href="feed.html" class="hover:text-accent">Food Feed</a></li>
-            <li><a href="about.html" class="hover:text-accent">About</a></li>
-        </ul>
-    </nav>
-</header>
-
+        <nav class="mt-4">
+            <ul class="flex gap-6">
+                <li><a href="index.html" class="hover:text-accent">Home/Login</a></li>
+                <li><a href="feed.html" class="hover:text-accent">Food Feed</a></li>
+                <li><a href="about.html" class="hover:text-accent">About</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- MAIN CONTENT -->
-    <main>
+    <main class="max-w-3xl mx-auto p-6">
 
         <!-- ABOUT SECTION -->
-        <section>
-            <h2>About This Project</h2>
-            <p>
+        <section class="mb-10">
+            <h2 class="text-2xl font-semibold text-primary mb-4">About This Project</h2>
+
+            <p class="mb-4">
                 Student Sustenance is a simple campus tool that helps students find free food 
                 and other resources in real time. Users can upload events, share locations, 
                 and remove posts once the food is gone.
             </p>
+
+            <p class="mb-4">
+                This project demonstrates core web development concepts including HTML structure, 
+                CSS styling, responsive design, and the use of a CSS framework. It also includes 
+                placeholders for database storage and real-time WebSocket updates to show how the 
+                app would function in a full-stack environment.
+            </p>
         </section>
 
-        <!-- 3RD-PARTY API PLACEHOLDER -->
-        <section>
-    <h2>Random Food Image (API Placeholder)</h2>
-    <p>
-        This section will display a random food image from the Foodish API:
-        <a href="https://foodish-api.com/api/">https://foodish-api.com/api/</a>
-    </p>
+<!-- 3RD-PARTY API PLACEHOLDER -->
+<section class="mt-10 flex flex-col items-center">
+    <img src="placeholder.png"
+         alt="Random food placeholder"
+         class="w-full max-w-lg rounded shadow object-cover" />
 
-    <figure>
-        <img src="placeholder.png" alt="Random food placeholder" />
-        <figcaption>Example image that will be replaced by Foodish API results.</figcaption>
-    </figure>
+    <p class="text-text/70 text-center mt-3">
+        Example image that will be replaced by Foodish API results.
+    </p>
 </section>
 
     </main>
 
     <!-- FOOTER -->
     <footer class="text-center p-6 bg-background text-text">
-    <hr class="border-accent mb-4" />
-
-    <span class="font-semibold">Josh Powell</span><br />
-
-    <a href="https://github.com/powjosh04/startup/"
-       class="text-primary hover:text-accent font-medium">
-       GitHub
-    </a>
-</footer>
-
+        <hr class="border-accent mb-4" />
+        <span class="font-semibold">Josh Powell</span><br />
+        <a href="https://github.com/powjosh04/startup/"
+           class="text-primary hover:text-accent font-medium">
+           GitHub
+        </a>
+    </footer>
 
 </body>
+
 </html>
