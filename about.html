@@ -8,6 +8,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    primary: '#2A6FDB',
+                    accent: '#1ABC9C',
+                    background: '#F5F7FA',
+                    text: '#222222',
+                }
+            }
+        }
+    }
+</script>
     <link rel="stylesheet" href="styles.css" />
 
 </head>
@@ -29,7 +43,8 @@
     </header>
 
     <!-- MAIN CONTENT -->
-    <main class="flex-grow flex items-center justify-center p-6">
+    <main class="flex-grow p-6">
+        <div class="max-w-4xl mx-auto w-full">
 
         <!-- ABOUT SECTION -->
         <section class="mb-10">
@@ -43,15 +58,16 @@
         </section>
 
 <!-- 3RD-PARTY API PLACEHOLDER -->
-<section class="mt-10 flex flex-col items-center">
+<section class="mt-10 w-full flex flex-col items-center">
     <img src="placeholder.png"
          alt="Random food placeholder"
          class="w-full max-w-lg rounded shadow object-cover" />
-
     <p class="text-text/70 text-center mt-3">
         Example image that will be replaced by Foodish API results.
     </p>
 </section>
+
+
 
     </main>
 
@@ -64,7 +80,7 @@
            GitHub
         </a>
     </footer>
-
+    </div>
 </body>
 
 </html>

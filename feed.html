@@ -8,6 +8,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    primary: '#2A6FDB',
+                    accent: '#1ABC9C',
+                    background: '#F5F7FA',
+                    text: '#222222',
+                }
+            }
+        }
+    }
+</script>
     <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -27,8 +41,8 @@
     </header>
 
     <!-- MAIN CONTENT -->
-    <main class="flex-grow flex items-center justify-center p-6">
-
+    <main class="flex-grow p-6">
+        <div class="max-w-6xl mx-auto w-full">
         <!-- DATABASE PLACEHOLDER -->
         <section class="mb-8">
             <h2 class="text-2xl font-semibold text-primary mb-2">Current Food Events</h2>
@@ -100,20 +114,28 @@
                 <div>
                     <label for="event-image" class="block font-medium">Upload Image:</label>
                     <input type="file" id="event-image" name="event-image" accept="image/*" required
-                           class="w-full border border-accent rounded p-2 bg-background" />
+                    class="w-full border border-accent rounded p-2 bg-background
+                    focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary" />
+
+
                 </div>
 
                 <div>
                     <label for="event-location" class="block font-medium">Location:</label>
                     <input type="text" id="event-location" name="event-location" required
-                           class="w-full border border-accent rounded p-2" />
+       class="w-full border border-accent rounded p-2
+              focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary" />
+
+
                 </div>
 
                 <div>
                     <label for="event-description" class="block font-medium">Description:</label>
                     <textarea id="event-description" name="event-description" required
-                              class="w-full border border-accent rounded p-2 h-32"
-                              placeholder="Describe the food, quantity left, and any time-sensitive details..."></textarea>
+          class="w-full border border-accent rounded p-2 h-32
+                 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+          placeholder="Describe the food, quantity left, and any time-sensitive details..."></textarea>
+
                 </div>
 
                 <button type="submit"
@@ -123,7 +145,7 @@
 
             </form>
         </section>
-
+         </div>
     </main>
 
     <!-- FOOTER -->
