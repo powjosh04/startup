@@ -5,9 +5,13 @@ main {
 
 /* Class selector */
 .card {
-  border: 1px solid #1ABC9C;
-  padding: 10px;
+  background-color: white;
+  padding: 1rem; /* same as p-4 */
+  border-radius: 0.5rem; /* same as rounded */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* same as shadow */
+  border: 2px solid #1ABC9C; /* your accent color */
 }
+
 
 #username-display {
   font-weight: bold;
@@ -18,4 +22,8 @@ main {
 button:hover {
   transform: scale(1.02); /* small zoom effect */
   transition: transform 0.15s ease;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
 }
