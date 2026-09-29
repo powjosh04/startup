@@ -39,6 +39,16 @@ I learned how to deploy to get hub through commands
 Interesting things I have learned about HTML.
 Spent 3 hours in TA office debugging and figuring out simon.html and uploading it to my website
 
+#CSS
+Tailwind basic syntax
+text-{color}
+bg-{color}
+border-{color}
+ring-{color}
+text-{size}
+font-{weight}
+
+
 ## React
 
 Interesting things I have learned about React
