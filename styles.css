@@ -9,6 +9,11 @@ main {
   padding: 10px;
 }
 
+#username-display {
+  font-weight: bold;
+  color: #2A6FDB;
+}
+
 /* Pseudo selector */
 button:hover {
   transform: scale(1.02); /* small zoom effect */
