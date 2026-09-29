@@ -102,6 +102,8 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [x] **Use of a imported font** - I used Inter for my startup.
 - [x] **Use of different types of selectors including element, class, ID, and pseudo selectors** - Added selectors to reinforce framework as well as add a zoom affect as buttons are hovered over.
 
+[[https://startup.powellcs260startup.click](https://startup.powellcs260startup.click/)] 
+
 ## 🚀 React part 1: Routing deliverable
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
