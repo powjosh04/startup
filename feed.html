@@ -8,26 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#2A6FDB',
-                        accent: '#1ABC9C',
-                        background: '#F5F7FA',
-                        text: '#222222',
-                    }
-                }
-            }
-        }
-    </script>
-
     <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body class="bg-background text-text">
-
+<body class="min-h-screen flex flex-col bg-background text-text">
     <!-- HEADER -->
     <header class="bg-primary text-white border-b-4 border-accent p-4">
         <h1 class="text-3xl font-bold">Student Sustenance</h1>
@@ -43,7 +27,7 @@
     </header>
 
     <!-- MAIN CONTENT -->
-    <main class="max-w-5xl mx-auto p-6">
+    <main class="flex-grow flex items-center justify-center p-6">
 
         <!-- DATABASE PLACEHOLDER -->
         <section class="mb-8">
@@ -58,7 +42,7 @@
         <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
 
             <!-- Post 1 -->
-                <article class="card bg-white p-4 rounded shadow border-l-4 border-accent">
+                <article class="card border-l-4 border-accent">
                 <h3 class="text-xl font-semibold mb-2">Pizza in Engineering Building</h3>
                 <img src="placeholder.png" alt="Free Leftover Pizza in box"
                      class="w-full h-40 object-cover rounded mb-3" />
@@ -70,7 +54,7 @@
             </article>
 
             <!-- Post 2 -->
-                <article class="card bg-white p-4 rounded shadow border-l-4 border-accent">
+                <article class="card border-l-4 border-accent">
                 <h3 class="text-xl font-semibold mb-2">Bagels in Library</h3>
                 <img src="placeholder.png" alt="Free Bagels on table"
                      class="w-full h-40 object-cover rounded mb-3" />
@@ -82,7 +66,7 @@
             </article>
 
             <!-- Post 3 -->
-                <article class="card bg-white p-4 rounded shadow border-l-4 border-accent">
+                <article class="card border-l-4 border-accent">
                 <h3 class="text-xl font-semibold mb-2">Fruit Cups in Student Center</h3>
                 <img src="placeholder.png" alt="Free Fruit Cups on table"
                      class="w-full h-40 object-cover rounded mb-3" />

@@ -8,25 +8,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#2A6FDB',
-                        accent: '#1ABC9C',
-                        background: '#F5F7FA',
-                        text: '#222222',
-        }
-      }
-    }
-  }
-</script>
     <link rel="stylesheet" href="styles.css" />
 
 </head>
 
-<body class="bg-background text-text">
+<body class="min-h-screen flex flex-col bg-background text-text">
 
     <!-- HEADER + NAV -->
     <header class="bg-primary text-white border-b-4 border-accent p-4">
@@ -43,7 +29,7 @@
     </header>
 
     <!-- MAIN CONTENT -->
-    <main class="max-w-3xl mx-auto p-6">
+    <main class="flex-grow flex items-center justify-center p-6">
 
         <!-- ABOUT SECTION -->
         <section class="mb-10">

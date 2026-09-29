@@ -8,25 +8,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#2A6FDB',
-                        accent: '#1ABC9C',
-                        background: '#F5F7FA',
-                        text: '#222222',
-        }
-      }
-    }
-  }
-</script>
 
     <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body class="bg-background text-text">
+<body class="min-h-screen flex flex-col bg-background text-text">
 
     <!-- HEADER -->
     <header class="bg-primary text-white border-b-4 border-accent p-4">
@@ -43,7 +29,7 @@
     </header>
 
     <!-- MAIN LOGIN CONTENT -->
-    <main class="min-h-screen flex items-center justify-center p-6">
+    <main class="flex-grow flex items-center justify-center p-6">
         <section class="bg-white p-8 rounded shadow max-w-md w-full">
 <h2 id="username-display" class="text-2xl font-semibold mb-4 text-primary">
     Login
@@ -52,8 +38,8 @@
             <form method="post" action="feed.html" class="space-y-4">
                 <div>
                     <label for="username" class="block font-medium">Username:</label>
-                    <input type="text" id="username" name="username" required
-                           class="w-full border border-accent rounded p-2" />
+                    <input type="text" id="username" name="username" required class="w-full border border-accent rounded p-2
+              focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary" />
                 </div>
 
                 <div>
