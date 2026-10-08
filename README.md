@@ -96,7 +96,7 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 - [x] I completed the prerequisites for this deliverable (Simon deployed, GitHub link, Git commits) - I have committed more than 10 times for this deliverable.
 - [x] **Visually appealing colors and layout. No overflowing elements.** - No elements are overflowing. I think the colors look great.
-- [x] **Use of a CSS framework** - I used tailwind for my framework.
+- [x] **Use of a CSS framework** - I used tailwind for my framework. (Swapped to bootstrap on 10/8 due to issues getting it to work)
 - [x] **All visual elements styled using CSS** - I styled everything using css
 - [x] **Responsive to window resizing using flexbox and/or grid display** - It is responsive to resizing and looks good on a variety of screen sizes.
 - [x] **Use of a imported font** - I used Inter for my startup.
@@ -108,10 +108,10 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] I completed the prerequisites for this deliverable (Simon deployed, GitHub link, Git commits) - Simon deployed 10/7, still working on enough commits, still need to work on my deliverable
-- [ ] **Bundled using Vite** - I did not complete this part of the deliverable.
-- [ ] **Components** - I did not complete this part of the deliverable.
-- [ ] **Router** - I did not complete this part of the deliverable.
+- [x] I completed the prerequisites for this deliverable (Simon deployed, GitHub link, Git commits) - Simon deployed 10/7, as of 10/8 I have 10+ commits for this assignment.
+- [x] **Bundled using Vite** - I have correctly bundled it using vite
+- [x] **Components** - There are multiple react components (App.jsx, Login.jsx, Feed.jsx, and About.jsx)
+- [x] **Router** - I imported the the router elements and used a routing structure to switch between views.
 
 ## 🚀 React part 2: Reactivity deliverable
 
