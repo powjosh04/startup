@@ -7,49 +7,63 @@ import { Login } from './login/login';
 import { Feed } from "./feed/feed.jsx";
 import { About } from './about/about';
 
-
 export default function App() {
   return (
     <BrowserRouter>
-    <div className="page">
+      <div className="page">
 
-      <header className="app-header">
-          <div className="container-fluid">
-          <h1 className="display-6">Student Sustenance</h1>
-          <p className="opacity-75">
-            Helping students find food and other resources on campus.
-          </p>
+        {/* HEADER */}
+        <header className="bg-primary text-white py-3">
+          <div className="container-fluid px-4">
+            <h1 className="h3 mb-1">Student Sustenance</h1>
+            <p className="mb-2 opacity-75">
+              Helping students find food and other resources on campus.
+            </p>
 
-          <ul className="nav-links">
-            <li><NavLink to="/">Home/Login</NavLink></li>
-            <li><NavLink to="/feed">Food Feed</NavLink></li>
-            <li><NavLink to="/about">About</NavLink></li>
-        </ul>
+            <nav>
+              <ul className="nav">
+                <li className="nav-item">
+                  <NavLink className="nav-link text-white" to="/">Home/Login</NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link text-white" to="/feed">Food Feed</NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link text-white" to="/about">About</NavLink>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
 
-        </div>
-      </header>
+        {/* MAIN */}
+        <main className="app-main container-fluid py-4 px-4">
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/feed" element={<Feed />} />
+            <Route path="/about" element={<About />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
 
-      <main className="app-main">
-        <Routes>
-            <Route path='/' element={<Login />} exact />
-            <Route path='/feed' element={<Feed />} />
-            <Route path='/about' element={<About />} />
-            <Route path='*' element={<NotFound />} />
-        </Routes>
-      </main>
+        {/* FOOTER */}
+        <footer className="bg-dark text-white py-4">
+          <div className="container-fluid px-4 text-center">
+            <span className="fw-semibold">Josh Powell</span><br />
+            <a href="https://github.com/powjosh04/startup/" className="text-info">GitHub</a>
+          </div>
+        </footer>
 
-      <footer className="app-footer">
-        <div className="container">
-          <span className="fw-semibold">Josh Powell</span><br />
-          <a href="https://github.com/powjosh04/startup/">GitHub</a>
-        </div>
-      </footer>
-
-    </div>
+      </div>
     </BrowserRouter>
   );
 }
 
 function NotFound() {
-  return <main className="container-fluid bg-secondary text-center">404: Return to sender. Address unknown.</main>;
+  return (
+    <div className="container-fluid py-5 px-4 text-center bg-secondary text-white">
+      <h2>404</h2>
+      <p>Return to sender. Address unknown.</p>
+    </div>
+  );
 }

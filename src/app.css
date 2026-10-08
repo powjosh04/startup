@@ -3,96 +3,42 @@ main {
   padding-bottom: 20px;
 }
 
-/* Class selector */
+/* Card styling */
 .card {
   background-color: white;
-  padding: 1rem; /* same as p-4 */
-  border-radius: 0.5rem; /* same as rounded */
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* same as shadow */
-  border: 2px solid #1ABC9C; /* your accent color */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border: 2px solid #1ABC9C;
 }
 
-
+/* Username display */
 #username-display {
   font-weight: bold;
   color: #2A6FDB;
 }
 
-/* Pseudo selector */
+/* Button hover */
 button:hover {
-  transform: scale(1.02); /* small zoom effect */
+  transform: scale(1.02);
   transition: transform 0.15s ease;
 }
 
+/* Global font */
 body {
-    font-family: 'Inter', sans-serif;
-}
-
-/* Page wrapper */
-.page {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Header */
-.app-header {
-  background-color: #0d6efd;
-  color: white;
-  padding: 0.75rem 0; /* compact */
-  text-align: left;
-}
-
-.app-title {
-  font-size: 1.5rem;   /* smaller than display-6 */
-  font-weight: 700;
-  margin: 0;
-}
-
-
-.app-header a {
-  color: white;
-  text-decoration: none;
-}
-
-
-.app-header .nav-links {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0 0 0;
-  justify-content: flex-start;  /* <-- ensures left alignment */
-}
-
-.app-header a:hover {
-  text-decoration: underline;
-}
-
-/* Main content */
-.app-main {
-  flex-grow: 1;
-  padding: 3rem 0;
-}
-
-/* Content card */
-.content-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-family: 'Inter', sans-serif;
 }
 
 /* Footer */
 .app-footer {
-  background-color: #212529; /* Bootstrap dark */
+  background-color: #212529;
   color: white;
   padding: 2rem 0;
   text-align: center;
 }
 
 .app-footer a {
-  color: #0dcaf0; /* Bootstrap info */
+  color: #0dcaf0;
   text-decoration: none;
 }
 
@@ -100,4 +46,14 @@ body {
   text-decoration: underline;
 }
 
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
+.app-main {
+  flex-grow: 1;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
