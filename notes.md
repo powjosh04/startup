@@ -27,10 +27,6 @@ sequenceDiagram
 - [Canvas](https://byu.instructure.com)
 - [MDN](https://developer.mozilla.org)
 
-## AWS
-
-Interesting things I have learned about AWS
-
 ## HTML
 
 9/21/26
@@ -48,9 +44,10 @@ ring-{color}
 text-{size}
 font-{weight}
 
-
 ## React
-
+10/7/2026
+Routers change it so your website runs off of one page by using react. It takes you website to this https://simon.powellcs260startup.click/about from https://simon.powellcs260startup.click/about.html so that it no longer runs off an html file.
+React components are Javascript functions that return jsx
 Porting to react:
 When you port your startup to React you will want to commit your changes as you complete each step in the process.
 
