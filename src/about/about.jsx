@@ -3,7 +3,9 @@ import React from 'react';
 export function About() {
   return (
     <main className="app-main container-fluid py-5">
-  <div className="container" style={{ maxWidth: "900px" }}>
+    <div className="container about-container">
+
+
 
     {/* ABOUT SECTION */}
     <section className="mb-5">
