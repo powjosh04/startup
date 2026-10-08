@@ -4,8 +4,10 @@ import './app.css';
 
 import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
 import { Login } from './login/login';
-import { Feed } from './feed/feed';
+import { Feed } from "./feed/feed.jsx";
 import { About } from './about/about';
+import { NotFound } from './notfound/notfound';
+
 
 export default function App() {
   return (
@@ -20,15 +22,21 @@ export default function App() {
           </p>
 
           <ul className="nav-links">
-            <li><a href="index.html">Home/Login</a></li>
-            <li><a href="feed.html">Food Feed</a></li>
-            <li><a href="about.html">About</a></li>
-          </ul>
+            <li><NavLink to="/">Home/Login</NavLink></li>
+            <li><NavLink to="/feed">Food Feed</NavLink></li>
+            <li><NavLink to="/about">About</NavLink></li>
+        </ul>
+
         </div>
       </header>
 
       <main className="app-main">
-            App components go here.
+        <Routes>
+            <Route path='/' element={<Login />} exact />
+            <Route path='/feed' element={<Feed />} />
+            <Route path='/about' element={<About />} />
+            <Route path='*' element={<NotFound />} />
+        </Routes>
       </main>
 
       <footer className="app-footer">
