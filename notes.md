@@ -51,4 +51,15 @@ font-{weight}
 
 ## React
 
-Interesting things I have learned about React
+Porting to react:
+When you port your startup to React you will want to commit your changes as you complete each step in the process.
+
+Install and configure Vite
+Reorganize the code
+Convert to React Bootstrap
+Enable React
+Create app component
+Create view components
+Create the router
+Convert HTML to React components
+Replace deployment script
