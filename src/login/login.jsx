@@ -13,30 +13,15 @@ export function Login() {
           
           <div className="mb-3">
             <label htmlFor="username" className="form-label fw-medium">Username:</label>
-            <input 
-              type="text" 
-              id="username" 
-              name="username" 
-              required 
-              className="form-control border-primary"
-            />
+            <input type="text" id="username" name="username" required className="form-control border-primary" />
           </div>
 
           <div className="mb-3">
             <label htmlFor="password" className="form-label fw-medium">Password:</label>
-            <input 
-              type="password" 
-              id="password" 
-              name="password" 
-              required 
-              className="form-control border-primary"
-            />
+            <input type="password" id="password" name="password" required className="form-control border-primary" />
           </div>
 
-          <button 
-            type="submit" 
-            className="btn btn-primary w-100 py-2"
-          >
+          <button type="submit" className="btn btn-primary w-100 py-2">
             Login
           </button>
 
