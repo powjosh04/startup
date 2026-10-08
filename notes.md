@@ -63,3 +63,6 @@ Create view components
 Create the router
 Convert HTML to React components
 Replace deployment script
+
+Make sure to change all instances of class to className
+Also remove default from export function
