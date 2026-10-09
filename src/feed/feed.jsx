@@ -1,8 +1,14 @@
 import React from 'react';
 
 export function Feed() {
+
+    function handleAddEvent(e) {
+    e.preventDefault();
+    // Later you can process form data here
+    // For now, just prevent reload
+  }
   return (
-    <main className="app-main container-fluid py-5">
+    <div className="app-main container-fluid py-5">
   <div className="container">
 
     {/* DATABASE PLACEHOLDER */}
@@ -26,8 +32,7 @@ export function Feed() {
               src="placeholder.png" 
               alt="Free Leftover Pizza in box"
               className="img-fluid rounded mb-3"
-              style={{ height: "160px", objectFit: "cover", width: "100%" }}
-            />
+              />
             <p>Leftover slices from the robotics club meeting.</p>
             <p className="fw-medium mt-2">
               <strong>Location:</strong> Engineering Building, Room 210
@@ -48,8 +53,7 @@ export function Feed() {
               src="placeholder.png" 
               alt="Free Bagels on table"
               className="img-fluid rounded mb-3"
-              style={{ height: "160px", objectFit: "cover", width: "100%" }}
-            />
+              />
             <p>Free bagels from a study group.</p>
             <p className="fw-medium mt-2">
               <strong>Location:</strong> Library, 2nd Floor
@@ -70,8 +74,7 @@ export function Feed() {
               src="placeholder.png" 
               alt="Free Fruit Cups on table"
               className="img-fluid rounded mb-3"
-              style={{ height: "160px", objectFit: "cover", width: "100%" }}
-            />
+              />
             <p>Healthy snacks left after a wellness workshop.</p>
             <p className="fw-medium mt-2">
               <strong>Location:</strong> Student Center Lobby
@@ -98,55 +101,55 @@ export function Feed() {
     </section>
 
     {/* ADD EVENT FORM */}
-    <section className="bg-white p-4 p-md-5 rounded shadow border-start border-4 border-primary">
-      <h2 className="h4 fw-bold text-primary mb-4">Add New Food Event</h2>
+        <section className="bg-white p-4 p-md-5 rounded shadow border-start border-4 border-primary">
+          <h2 className="h4 fw-bold text-primary mb-4">Add New Food Event</h2>
 
-      <form method="post" action="feed.html">
+          <form onSubmit={handleAddEvent}>
+            
+            <div className="mb-3">
+              <label htmlFor="event-image" className="form-label fw-medium">Upload Image:</label>
+              <input 
+                type="file" 
+                id="event-image" 
+                name="event-image" 
+                accept="image/*" 
+                required
+                className="form-control"
+              />
+            </div>
 
-        <div className="mb-3">
-          <label htmlFor="event-image" className="form-label fw-medium">Upload Image:</label>
-          <input 
-            type="file" 
-            id="event-image" 
-            name="event-image" 
-            accept="image/*" 
-            required
-            className="form-control"
-          />
-        </div>
+            <div className="mb-3">
+              <label htmlFor="event-location" className="form-label fw-medium">Location:</label>
+              <input 
+                type="text" 
+                id="event-location" 
+                name="event-location" 
+                required
+                className="form-control"
+              />
+            </div>
 
-        <div className="mb-3">
-          <label htmlFor="event-location" className="form-label fw-medium">Location:</label>
-          <input 
-            type="text" 
-            id="event-location" 
-            name="event-location" 
-            required
-            className="form-control"
-          />
-        </div>
+            <div className="mb-3">
+              <label htmlFor="event-description" className="form-label fw-medium">Description:</label>
+              <textarea 
+                id="event-description" 
+                name="event-description" 
+                required
+                className="form-control"
+                rows="4"
+                placeholder="Describe the food, quantity left, and any time-sensitive details..."
+              ></textarea>
+            </div>
 
-        <div className="mb-3">
-          <label htmlFor="event-description" className="form-label fw-medium">Description:</label>
-          <textarea 
-            id="event-description" 
-            name="event-description" 
-            required
-            className="form-control"
-            rows="4"
-            placeholder="Describe the food, quantity left, and any time-sensitive details..."
-          ></textarea>
-        </div>
+            <button type="submit" className="btn btn-primary w-100 py-2">
+              Add Event
+            </button>
 
-        <button type="submit" className="btn btn-primary w-100 py-2">
-          Add Event
-        </button>
-
-      </form>
-    </section>
+          </form>
+        </section>
 
   </div>
-</main>
+</div>
 
   );
 }

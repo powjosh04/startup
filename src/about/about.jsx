@@ -2,7 +2,7 @@ import React from 'react';
 
 export function About() {
   return (
-    <main className="app-main container-fluid py-5">
+    <div className="app-main container-fluid py-5">
     <div className="container about-container">
 
 
@@ -24,7 +24,6 @@ export function About() {
         src="placeholder.png"
         alt="Random food placeholder"
         className="img-fluid rounded shadow mb-3"
-        style={{ maxWidth: "600px", objectFit: "cover" }}
       />
       <p className="text-muted">
         Example image that will be replaced by Foodish API results.
@@ -32,7 +31,7 @@ export function About() {
     </section>
 
   </div>
-</main>
+</div>
 
   );
 }
