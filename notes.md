@@ -71,3 +71,15 @@ This adds a text box that you can type in to change the example color.
 
 =>
 This is called the fat arrow. It makes it simpler to write functions. In the example above it makes it so on the change of the text the color updates.
+
+JSON (JavaScript Object Notation) is a way to store data. It can be a string, number, boolean, array, object, or null. It is most often a object.
+This is an example of JSON:
+{
+  "class": {
+    "title": "web programming",
+    "description": "Amazing"
+  },
+  "enrollment": ["Marco", "Jana", "فَاطِمَة"],
+  "start": "2025-02-01",
+  "end": null
+}
