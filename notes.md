@@ -116,3 +116,10 @@ getItem(name)	        Gets a named item's value from local storage
 removeItem(name)	    Removes a named item from local storage
 clear()	                Clears all items in local storage
 
+10/20/2026
+Promises:  The execution of a promise allows the main rendering thread to continue while some action is executed in the background. You create a promise by calling the Promise object constructor and passing it an executor function that runs the asynchronous operation. Executing asynchronously means that promise constructor may return before the promise executor function runs. The state of the promise execution is always in one of three possible states.
+
+pending - Currently running asynchronously
+fulfilled - Completed successfully
+rejected - Failed to complete
+
