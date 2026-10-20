@@ -83,3 +83,13 @@ This is an example of JSON:
   "start": "2025-02-01",
   "end": null
 }
+
+Localstorage is data stored within your browser. It can be a string, number, or boolean. Local storage can only hold 5mb of data so it is important to catch it before it crashes using try blocks. Local storage is accessible to anyone running Javascript on the same origin so you don't want to hold important information in it.
+There are four main functions that can be used with localStorage.
+
+Function	            Meaning
+setItem(name, value)	Sets a named item's value into local storage
+getItem(name)	        Gets a named item's value from local storage
+removeItem(name)	    Removes a named item from local storage
+clear()	                Clears all items in local storage
+
