@@ -63,3 +63,11 @@ Replace deployment script
 
 Make sure to change all instances of class to className
 Also remove default from export function
+
+10/19/2026
+Simple example of reactivity in code:
+<input type="text" value={color} onChange={(e) => updateColor(e.target.value)} />
+This adds a text box that you can type in to change the example color.
+
+=>
+This is called the fat arrow. It makes it simpler to write functions. In the example above it makes it so on the change of the text the color updates.
