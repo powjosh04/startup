@@ -65,9 +65,32 @@ Make sure to change all instances of class to className
 Also remove default from export function
 
 10/19/2026
+Data types in Javascript:
+Type	    Meaning
+Null	    The type of a variable that has not been assigned a value.
+Undefined	The type of a variable that has not been defined.
+Boolean	    true or false.
+Number	    A 64-bit signed number.
+BigInt	    A number of arbitrary magnitude.
+String	    A textual sequence of characters.
+Symbol	    A unique value.
+
+Javascript object types:
+Type	    Use	Example
+Object	    A collection of properties represented by name-value pairs. Values can be of any type.	{a:3, b:'fish'}
+Function	An object that has the ability to be called.	function a() {}
+Date	    Calendar dates and times.	new Date('1995-12-17')
+Array	    An ordered sequence of any type.	[3, 'fish']
+Map        	A collection of key-value pairs that support efficient lookups.	new Map()
+JSON	    A lightweight data-interchange format used to share information across programs.	{"a":3, "b":"fish"}
+
 Simple example of reactivity in code:
 <input type="text" value={color} onChange={(e) => updateColor(e.target.value)} />
 This adds a text box that you can type in to change the example color.
+
+5 == "5" outputs true. 5 === "5" outputs false.
+=== This makes it look for it literally. It is false because one is a string and one is a number and therefore doesn't match.
+== converts them into the same type and then compares the values
 
 =>
 This is called the fat arrow. It makes it simpler to write functions. In the example above it makes it so on the change of the text the color updates.
