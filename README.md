@@ -88,8 +88,6 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [x] **DB data placeholder** - There is a current food page that will pull from a database with the option to remove under each post and add at the bottom of the page.
 - [x] **WebSocket placeholder** - A section of the current event page will update in real time as users add and remove events
 
-[[https://startup.powellcs260startup.click](https://startup.powellcs260startup.click/)] 
-
 ## 🚀 CSS deliverable
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
@@ -102,8 +100,6 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [x] **Use of a imported font** - I used Inter for my startup.
 - [x] **Use of different types of selectors including element, class, ID, and pseudo selectors** - Added selectors to reinforce framework as well as add a zoom affect as buttons are hovered over.
 
-[[https://startup.powellcs260startup.click](https://startup.powellcs260startup.click/)] 
-
 ## 🚀 React part 1: Routing deliverable
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
@@ -113,13 +109,11 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [x] **Components** - There are multiple react components (App.jsx, Login.jsx, Feed.jsx, and About.jsx)
 - [x] **Router** - I imported the the router elements and used a routing structure to switch between views.
 
-[[https://startup.powellcs260startup.click](https://startup.powellcs260startup.click/)] 
-
 ## 🚀 React part 2: Reactivity deliverable
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] I completed the prerequisites for this deliverable (Simon deployed, GitHub link, Git commits)
+- [ ] I completed the prerequisites for this deliverable (Simon deployed, GitHub link, Git commits)-Simon deployed 10/21
 - [ ] **All functionality implemented or mocked out** - I did not complete this part of the deliverable.
 - [ ] **Hooks** - I did not complete this part of the deliverable.
 
