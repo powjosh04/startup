@@ -1,11 +1,15 @@
 import React from 'react';
 
 export function About() {
+  const [imageUrl, setImageUrl] = React.useState('data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=');
+
+  React.useEffect(() => {
+    setImageUrl(`placeholder.png`);
+  }, []);
+
   return (
     <div className="app-main container-fluid py-5">
     <div className="container about-container">
-
-
 
     {/* ABOUT SECTION */}
     <section className="mb-5">
@@ -21,7 +25,7 @@ export function About() {
     {/* API PLACEHOLDER */}
     <section className="text-center">
       <img 
-        src="placeholder.png"
+        src={imageUrl}
         alt="Random food placeholder"
         className="img-fluid rounded shadow mb-3"
       />
