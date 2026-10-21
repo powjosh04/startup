@@ -4,8 +4,12 @@ import { useNavigate } from 'react-router-dom';
 export function Login() {
   const navigate = useNavigate();
 
+  const [username, setUsername] = React.useState('');
+  const [password, setPassword] = React.useState('');
+
   function handleSubmit(e) {
     e.preventDefault();      // stop full page reload
+    localStorage.setItem('username', username);
     navigate('/feed');       // switch views using React Router
   }
 
@@ -27,6 +31,8 @@ export function Login() {
               name="username" 
               required 
               className="form-control border-primary"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
             />
           </div>
 
@@ -38,6 +44,8 @@ export function Login() {
               name="password" 
               required 
               className="form-control border-primary"
+              value={password} 
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
 
