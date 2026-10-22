@@ -23,7 +23,7 @@ export default function App() {
             <nav>
               <ul className="nav">
                 <li className="nav-item">
-                  <NavLink className="nav-link text-white" to="/">Home/Login</NavLink>
+                  <NavLink className="nav-link text-white" to="/">Login/Logout</NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink className="nav-link text-white" to="/feed">Food Feed</NavLink>
