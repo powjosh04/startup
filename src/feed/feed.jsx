@@ -53,7 +53,9 @@ React.useEffect(() => {
 ]);
 
 function removePost(id) {
-  setPosts(posts.filter((post) => post.id !== id));
+  setPosts((currentPosts) =>
+    currentPosts.filter((post) => post.id !== id)
+  );
 }
 
 //Form functionality
