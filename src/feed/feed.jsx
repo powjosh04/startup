@@ -8,6 +8,7 @@ export function Feed() {
     // For now, just prevent reload
   }
 
+  // Simulated notifications for WebSocket placeholder
   const [notifications, setNotifications] = React.useState([
   'Welcome to Student Sustenance!'
 ]);
@@ -31,6 +32,35 @@ React.useEffect(() => {
 
   return () => clearInterval(interval);
 }, []);
+
+// Database placeholder posts
+  const [posts, setPosts] = React.useState([
+  {
+    id: 1,
+    title: 'Pizza in Engineering Building',
+    image: 'placeholder.png',
+    description: 'Leftover slices from the robotics club meeting.',
+    location: 'Engineering Building, Room 210',
+  },
+  {
+    id: 2,
+    title: 'Bagels in Library',
+    image: 'placeholder.png',
+    description: 'Free bagels from a study group.',
+    location: 'Library, 2nd Floor',
+  },
+  {
+    id: 3,
+    title: 'Fruit Cups in Student Center',
+    image: 'placeholder.png',
+    description: 'Healthy snacks left after a wellness workshop.',
+    location: 'Student Center Lobby',
+  },
+]);
+
+function removePost(id) {
+  setPosts(posts.filter((post) => post.id !== id));
+}
 
   return (
     <div className="app-main container-fluid py-5">
@@ -68,73 +98,48 @@ React.useEffect(() => {
       </p>
     </section>
 
-    {/* POSTS GRID */}
-    <section className="row g-4 mb-5">
+{/* POSTS GRID */}
+<section className="row g-4 mb-5">
 
-      {/* Post 1 */}
-      <article className="col-12 col-sm-6 col-lg-4">
-        <div className="card shadow-sm border-start border-4 border-primary h-100">
-          <div className="card-body">
-            <h3 className="h5 fw-semibold mb-3">Pizza in Engineering Building</h3>
-            <img 
-              src="placeholder.png" 
-              alt="Free Leftover Pizza in box"
-              className="img-fluid rounded mb-3"
-              />
-            <p>Leftover slices from the robotics club meeting.</p>
-            <p className="fw-medium mt-2">
-              <strong>Location:</strong> Engineering Building, Room 210
-            </p>
-            <button className="btn btn-primary mt-3 w-100">
-              Remove Event
-            </button>
-          </div>
+  {posts.map((post) => (
+    <article
+      key={post.id}
+      className="col-12 col-sm-6 col-lg-4"
+    >
+      <div className="card shadow-sm border-start border-4 border-primary h-100">
+        <div className="card-body">
+
+          <h3 className="h5 fw-semibold mb-3">
+            {post.title}
+          </h3>
+
+          <img
+            src={post.image}
+            alt={post.title}
+            className="img-fluid rounded mb-3"
+          />
+
+          <p>
+            {post.description}
+          </p>
+
+          <p className="fw-medium mt-2">
+            <strong>Location:</strong> {post.location}
+          </p>
+
+          <button
+            className="btn btn-primary mt-3 w-100"
+            onClick={() => removePost(post.id)}
+          >
+            Remove Event
+          </button>
+
         </div>
-      </article>
+      </div>
+    </article>
+  ))}
 
-      {/* Post 2 */}
-      <article className="col-12 col-sm-6 col-lg-4">
-        <div className="card shadow-sm border-start border-4 border-primary h-100">
-          <div className="card-body">
-            <h3 className="h5 fw-semibold mb-3">Bagels in Library</h3>
-            <img 
-              src="placeholder.png" 
-              alt="Free Bagels on table"
-              className="img-fluid rounded mb-3"
-              />
-            <p>Free bagels from a study group.</p>
-            <p className="fw-medium mt-2">
-              <strong>Location:</strong> Library, 2nd Floor
-            </p>
-            <button className="btn btn-primary mt-3 w-100">
-              Remove Event
-            </button>
-          </div>
-        </div>
-      </article>
-
-      {/* Post 3 */}
-      <article className="col-12 col-sm-6 col-lg-4">
-        <div className="card shadow-sm border-start border-4 border-primary h-100">
-          <div className="card-body">
-            <h3 className="h5 fw-semibold mb-3">Fruit Cups in Student Center</h3>
-            <img 
-              src="placeholder.png" 
-              alt="Free Fruit Cups on table"
-              className="img-fluid rounded mb-3"
-              />
-            <p>Healthy snacks left after a wellness workshop.</p>
-            <p className="fw-medium mt-2">
-              <strong>Location:</strong> Student Center Lobby
-            </p>
-            <button className="btn btn-primary mt-3 w-100">
-              Remove Event
-            </button>
-          </div>
-        </div>
-      </article>
-
-    </section>
+</section>
 
     {/* ADD EVENT FORM */}
         <section className="bg-white p-4 p-md-5 rounded shadow border-start border-4 border-primary">
