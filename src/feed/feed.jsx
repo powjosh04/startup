@@ -24,10 +24,9 @@ React.useEffect(() => {
     const randomMessage =
       messages[Math.floor(Math.random() * messages.length)];
 
-    setNotifications((current) => [
-      randomMessage,
-      ...current,
-    ]);
+    setNotifications((current) =>
+      [randomMessage, ...current].slice(0, 10)
+    );
   }, 10000);
 
   return () => clearInterval(interval);
@@ -36,6 +35,29 @@ React.useEffect(() => {
   return (
     <div className="app-main container-fluid py-5">
   <div className="container">
+
+        {/* WEBSOCKET PLACEHOLDER */}
+  <section className="mb-5 bg-white p-4 rounded shadow border-start border-4 border-primary">
+    <h2 className="h5 fw-semibold text-primary mb-2">
+      Live Updates (WebSocket Placeholder)
+    </h2>
+
+    <p className="text-muted">
+      Simulated real-time notifications. This will later be replaced with
+      actual WebSocket messages from the server.
+    </p>
+
+    <ul className="list-group mt-3">
+      {notifications.map((message, index) => (
+        <li
+          key={index}
+          className="list-group-item"
+        >
+          {message}
+        </li>
+      ))}
+    </ul>
+  </section>
 
     {/* DATABASE PLACEHOLDER */}
     <section className="mb-5">
@@ -113,29 +135,6 @@ React.useEffect(() => {
       </article>
 
     </section>
-
-    {/* WEBSOCKET PLACEHOLDER */}
-  <section className="mb-5 bg-white p-4 rounded shadow border-start border-4 border-primary">
-    <h2 className="h5 fw-semibold text-primary mb-2">
-      Live Updates (WebSocket Placeholder)
-    </h2>
-
-    <p className="text-muted">
-      Simulated real-time notifications. This will later be replaced with
-      actual WebSocket messages from the server.
-    </p>
-
-    <ul className="list-group mt-3">
-      {notifications.map((message, index) => (
-        <li
-          key={index}
-          className="list-group-item"
-        >
-          {message}
-        </li>
-      ))}
-    </ul>
-  </section>
 
     {/* ADD EVENT FORM */}
         <section className="bg-white p-4 p-md-5 rounded shadow border-start border-4 border-primary">
