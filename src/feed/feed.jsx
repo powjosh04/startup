@@ -39,7 +39,7 @@ React.useEffect(() => {
         {/* WEBSOCKET PLACEHOLDER */}
   <section className="mb-5 bg-white p-4 rounded shadow border-start border-4 border-primary">
     <h2 className="h5 fw-semibold text-primary mb-2">
-      Live Updates (WebSocket Placeholder)
+      Live Updates
     </h2>
 
     <p className="text-muted">
