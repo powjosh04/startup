@@ -8,6 +8,11 @@ import { Feed } from "./feed/feed.jsx";
 import { About } from './about/about';
 
 export default function App() {
+
+    const [currentUser, setCurrentUser] = React.useState(
+    localStorage.getItem('username')
+  );
+
   return (
     <BrowserRouter>
       <div className="page">
@@ -24,10 +29,14 @@ export default function App() {
               <ul className="nav">
                 <li className="nav-item">
                   <NavLink className="nav-link text-white" to="/">Login/Logout</NavLink>
-                </li>
-                <li className="nav-item">
-                  <NavLink className="nav-link text-white" to="/feed">Food Feed</NavLink>
-                </li>
+                </li> 
+                {currentUser && (
+                  <li className="nav-item">
+                    <NavLink className="nav-link text-white" to="/feed">
+                      Food Feed
+                    </NavLink>
+                  </li>
+                )}
                 <li className="nav-item">
                   <NavLink className="nav-link text-white" to="/about">About</NavLink>
                 </li>
@@ -39,7 +48,7 @@ export default function App() {
         {/* MAIN */}
         <main className="app-main container-fluid py-4 px-4">
           <Routes>
-            <Route path="/" element={<Login />} />
+            <Route path="/" element={<Login setCurrentUser={setCurrentUser} />} />
             <Route path="/feed" element={<Feed />} />
             <Route path="/about" element={<About />} />
             <Route path="*" element={<NotFound />} />

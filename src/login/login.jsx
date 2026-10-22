@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export function Login() {
+export function Login({ setCurrentUser }) {
   const navigate = useNavigate();
 
   const [username, setUsername] = React.useState('');
@@ -10,16 +10,23 @@ export function Login() {
   const storedUser = localStorage.getItem('username');
 
   function handleSubmit(e) {
-    e.preventDefault();
+  e.preventDefault();
 
-    localStorage.setItem('username', username);
-    navigate('/feed');
-  }
+  localStorage.setItem('username', username);
+
+  setCurrentUser(username);
+
+  navigate('/feed');
+}
+
 
   function handleLogout() {
-    localStorage.removeItem('username');
-    navigate('/');
-  }
+  localStorage.removeItem('username');
+
+  setCurrentUser(null);
+
+  navigate('/');
+}
 
   if (storedUser) {
     return (
