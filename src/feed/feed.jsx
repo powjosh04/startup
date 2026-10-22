@@ -2,12 +2,6 @@ import React from 'react';
 
 export function Feed() {
 
-    function handleAddEvent(e) {
-    e.preventDefault();
-    // Later you can process form data here
-    // For now, just prevent reload
-  }
-
   // Simulated notifications for WebSocket placeholder
   const [notifications, setNotifications] = React.useState([
   'Welcome to Student Sustenance!'
@@ -60,6 +54,28 @@ React.useEffect(() => {
 
 function removePost(id) {
   setPosts(posts.filter((post) => post.id !== id));
+}
+
+//Form functionality
+const [location, setLocation] = React.useState('');
+const [description, setDescription] = React.useState('');
+const [image, setImage] = React.useState('placeholder.png');
+
+function handleAddEvent(e) {
+  e.preventDefault();
+
+  const newPost = {
+    id: Date.now(),
+    title: `Food Event at ${location}`,
+    image: 'placeholder.png',
+    description: description,
+    location: location,
+  };
+
+  setPosts([...posts, newPost]);
+
+  setLocation('');
+  setDescription('');
 }
 
   return (
@@ -146,7 +162,8 @@ function removePost(id) {
           <h2 className="h4 fw-bold text-primary mb-4">Add New Food Event</h2>
 
           <form onSubmit={handleAddEvent}>
-            
+          
+          //Will be replaced with actual image upload functionality later
             <div className="mb-3">
               <label htmlFor="event-image" className="form-label fw-medium">Upload Image:</label>
               <input 
@@ -161,24 +178,28 @@ function removePost(id) {
 
             <div className="mb-3">
               <label htmlFor="event-location" className="form-label fw-medium">Location:</label>
-              <input 
-                type="text" 
-                id="event-location" 
-                name="event-location" 
-                required
-                className="form-control"
-              />
+              <input
+              type="text"
+              id="event-location"
+              name="event-location"
+              required
+              className="form-control"
+              value={location}
+              onChange={(e) => setLocation(e.target.value)}
+/>
             </div>
 
             <div className="mb-3">
               <label htmlFor="event-description" className="form-label fw-medium">Description:</label>
-              <textarea 
-                id="event-description" 
-                name="event-description" 
+              <textarea
+                id="event-description"
+                name="event-description"
                 required
                 className="form-control"
                 rows="4"
                 placeholder="Describe the food, quantity left, and any time-sensitive details..."
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
               ></textarea>
             </div>
 
