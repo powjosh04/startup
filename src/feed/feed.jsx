@@ -7,6 +7,32 @@ export function Feed() {
     // Later you can process form data here
     // For now, just prevent reload
   }
+
+  const [notifications, setNotifications] = React.useState([
+  'Welcome to Student Sustenance!'
+]);
+
+React.useEffect(() => {
+  const messages = [
+    'User123 just posted pizza in the Engineering Building!',
+    'CampusBot found bagels in the Library!',
+    'Student Government posted donuts in the Student Center!',
+    'Wellness Club posted fruit cups near the library!',
+  ];
+
+  const interval = setInterval(() => {
+    const randomMessage =
+      messages[Math.floor(Math.random() * messages.length)];
+
+    setNotifications((current) => [
+      randomMessage,
+      ...current,
+    ]);
+  }, 10000);
+
+  return () => clearInterval(interval);
+}, []);
+
   return (
     <div className="app-main container-fluid py-5">
   <div className="container">
@@ -89,16 +115,27 @@ export function Feed() {
     </section>
 
     {/* WEBSOCKET PLACEHOLDER */}
-    <section className="mb-5 bg-white p-4 rounded shadow border-start border-4 border-primary">
-      <h2 className="h5 fw-semibold text-primary mb-2">Live Updates (WebSocket Placeholder)</h2>
-      <p className="text-muted">
-        This section will display real-time notifications using WebSockets.
-        For example: “User123 just posted a bagel in the Library!”
-      </p>
-      <ul className="mt-3 text-muted">
-        <li>[Live update messages will appear here]</li>
-      </ul>
-    </section>
+  <section className="mb-5 bg-white p-4 rounded shadow border-start border-4 border-primary">
+    <h2 className="h5 fw-semibold text-primary mb-2">
+      Live Updates (WebSocket Placeholder)
+    </h2>
+
+    <p className="text-muted">
+      Simulated real-time notifications. This will later be replaced with
+      actual WebSocket messages from the server.
+    </p>
+
+    <ul className="list-group mt-3">
+      {notifications.map((message, index) => (
+        <li
+          key={index}
+          className="list-group-item"
+        >
+          {message}
+        </li>
+      ))}
+    </ul>
+  </section>
 
     {/* ADD EVENT FORM */}
         <section className="bg-white p-4 p-md-5 rounded shadow border-start border-4 border-primary">
