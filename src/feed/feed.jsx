@@ -67,15 +67,19 @@ function handleAddEvent(e) {
   const newPost = {
     id: Date.now(),
     title: `Food Event at ${location}`,
-    image: 'placeholder.png',
+    image: image,
     description: description,
     location: location,
   };
 
-  setPosts([...posts, newPost]);
+  setPosts((currentPosts) => [
+  ...currentPosts,
+  newPost,
+]);
 
   setLocation('');
   setDescription('');
+  setImage('placeholder.png');
 }
 
   return (
@@ -163,17 +167,24 @@ function handleAddEvent(e) {
 
           <form onSubmit={handleAddEvent}>
           
-          //Will be replaced with actual image upload functionality later
+          {/* Will be replaced with actual image upload functionality later */}
             <div className="mb-3">
               <label htmlFor="event-image" className="form-label fw-medium">Upload Image:</label>
-              <input 
-                type="file" 
-                id="event-image" 
-                name="event-image" 
-                accept="image/*" 
+             <input
+                type="file"
+                id="event-image"
+                name="event-image"
+                accept="image/*"
                 required
                 className="form-control"
-              />
+                onChange={(e) => {
+                const file = e.target.files[0];
+
+                if (file) {
+                  setImage(URL.createObjectURL(file));
+                }
+              }}
+            />
             </div>
 
             <div className="mb-3">
