@@ -123,3 +123,12 @@ pending - Currently running asynchronously
 fulfilled - Completed successfully
 rejected - Failed to complete
 
+##Service
+10/28/2026
+HTTP request verbs:
+GET	    Get the requested resource. This can represent a request to get a single resource or a resource representing a list of resources.
+POST	Create a new resource. The body of the request contains the resource. The response should include a unique ID of the newly created resource.
+DELETE	Delete a resource. Either the URL path or HTTP header must contain the unique ID of the resource to delete.
+OPTIONS	Get metadata about a resource. Usually only HTTP headers are returned. The resource itself is not returned.
+PUT	    Update a resource. Either the URL path, HTTP header, or body must contain the unique ID of the resource being updated. The body of the request should contain the updated resource. The body of the response may contain the resulting updated resource.
+

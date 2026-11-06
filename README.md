@@ -113,9 +113,9 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] I completed the prerequisites for this deliverable (Simon deployed, GitHub link, Git commits)-Simon deployed 10/21
-- [ ] **All functionality implemented or mocked out** - I did not complete this part of the deliverable.
-- [ ] **Hooks** - I did not complete this part of the deliverable.
+- [x] I completed the prerequisites for this deliverable (Simon deployed, GitHub link, Git commits)-Simon deployed 10/21, 10+ git commits for this assignment
+- [x] **All functionality implemented or mocked out** - All technologies that will be added are mocked out and ready to be fully implemented in future deliverables.
+- [x] **Hooks** - Usestate manages login/logout, feed posts, event form, and for my API placeholder. Useeffect manages websocket notifications.
 
 ## 🚀 Service deliverable
 
