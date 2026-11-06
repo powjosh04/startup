@@ -27,35 +27,46 @@ React.useEffect(() => {
   return () => clearInterval(interval);
 }, []);
 
-// Database placeholder posts
-  const [posts, setPosts] = React.useState([
-  {
-    id: 1,
-    title: 'Pizza in Engineering Building',
-    image: 'placeholder.png',
-    description: 'Leftover slices from the robotics club meeting.',
-    location: 'Engineering Building, Room 210',
-  },
-  {
-    id: 2,
-    title: 'Bagels in Library',
-    image: 'placeholder.png',
-    description: 'Free bagels from a study group.',
-    location: 'Library, 2nd Floor',
-  },
-  {
-    id: 3,
-    title: 'Fruit Cups in Student Center',
-    image: 'placeholder.png',
-    description: 'Healthy snacks left after a wellness workshop.',
-    location: 'Student Center Lobby',
-  },
-]);
+//Set posts
+const [posts, setPosts] = React.useState([]);
 
-function removePost(id) {
-  setPosts((currentPosts) =>
-    currentPosts.filter((post) => post.id !== id)
-  );
+//Load posts from backend
+async function loadEvents() {
+  try {
+    const response = await fetch('/api/events', {
+      credentials: 'include',
+    });
+
+    const events = await response.json();
+
+    setPosts(events);
+  } catch (error) {
+    console.error('Failed to load events', error);
+  }
+}
+
+//Load events on component start
+React.useEffect(() => {
+  loadEvents();
+}, []);
+
+//Remove post
+async function removePost(id) {
+  try {
+    await fetch(`/api/events/${id}`, {
+      method: 'DELETE',
+      credentials: 'include',
+    });
+
+    setPosts((currentPosts) =>
+      currentPosts.filter(
+        (post) => post.id !== id
+      )
+    );
+  } catch (error) {
+    console.error('Failed to delete event', error);
+  }
+}
 }
 
 //Form functionality
@@ -63,25 +74,39 @@ const [location, setLocation] = React.useState('');
 const [description, setDescription] = React.useState('');
 const [image, setImage] = React.useState('placeholder.png');
 
-function handleAddEvent(e) {
+
+//Handle form submission
+async function handleAddEvent(e) {
   e.preventDefault();
 
-  const newPost = {
-    id: Date.now(),
-    title: `Food Event at ${location}`,
-    image: image,
-    description: description,
-    location: location,
-  };
+  try {
+    const response = await fetch('/api/events', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      credentials: 'include',
+      body: JSON.stringify({
+        title: `Food Event at ${location}`,
+        description,
+        location,
+        imageUrl: image,
+      }),
+    });
 
-  setPosts((currentPosts) => [
-  ...currentPosts,
-  newPost,
-]);
+    const newEvent = await response.json();
 
-  setLocation('');
-  setDescription('');
-  setImage('placeholder.png');
+    setPosts((currentPosts) => [
+      ...currentPosts,
+      newEvent,
+    ]);
+
+    setLocation('');
+    setDescription('');
+    setImage('placeholder.png');
+  } catch (error) {
+    console.error('Failed to create event', error);
+  }
 }
 
   return (
