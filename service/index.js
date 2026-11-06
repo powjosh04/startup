@@ -1,6 +1,3 @@
-const port = process.argv.length > 2 ? process.argv[2] : 4000;
-app.use(express.static('public'));
-
 const express = require('express');
 const bcrypt = require('bcrypt');
 const cookieParser = require('cookie-parser');
@@ -9,8 +6,9 @@ const uuid = require('uuid');
 const app = express();
 const apiRouter = express.Router();
 
-app.use(express.json());
-app.use(cookieParser());
+const port = process.argv.length > 2 ? process.argv[2] : 4000;
+
+app.use(express.static('public'));
 
 app.use('/api', apiRouter);
 
@@ -144,7 +142,6 @@ apiRouter.post('/events', verifyAuth, (req, res) => {
     description: req.body.description,
     location: req.body.location,
     imageUrl: req.body.imageUrl,
-    votes: 0,
     createdAt: new Date(),
   };
 

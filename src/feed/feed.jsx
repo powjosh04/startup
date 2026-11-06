@@ -67,7 +67,6 @@ async function removePost(id) {
     console.error('Failed to delete event', error);
   }
 }
-}
 
 //Form functionality
 const [location, setLocation] = React.useState('');

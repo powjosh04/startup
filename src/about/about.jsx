@@ -3,9 +3,23 @@ import React from 'react';
 export function About() {
   const [imageUrl, setImageUrl] = React.useState('data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=');
 
-  React.useEffect(() => {
-    setImageUrl(`placeholder.png`);
-  }, []);
+React.useEffect(() => {
+  async function loadFoodImage() {
+    try {
+      const response = await fetch(
+        'https://foodish-api.com/api/images/:food'
+      );
+
+      const data = await response.json();
+
+      setImageUrl(data.image);
+    } catch (error) {
+      console.error('Failed to load image', error);
+    }
+  }
+
+  loadFoodImage();
+}, []);
 
   return (
     <div className="app-main container-fluid py-5">
