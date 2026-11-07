@@ -7,12 +7,12 @@ React.useEffect(() => {
   async function loadFoodImage() {
     try {
       const response = await fetch(
-        'https://foodish-api.com/api/'
+        'https://www.themealdb.com/api/json/v1/1/random.php'
       );
 
       const data = await response.json();
 
-      setImageUrl(data.image);
+      setImageUrl(data.meals[0].strMealThumb);
     } catch (error) {
       console.error('Failed to load image', error);
     }
