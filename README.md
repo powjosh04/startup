@@ -121,14 +121,14 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] I completed the prerequisites for this deliverable (Simon deployed, GitHub link, Git commits)
-- [ ] **Node.js/Express HTTP service** - I did not complete this part of the deliverable.
-- [ ] **Static middleware for frontend** - I did not complete this part of the deliverable.
-- [ ] **Calls to third party endpoints** - I did not complete this part of the deliverable.
-- [ ] **Backend service endpoints** - I did not complete this part of the deliverable.
-- [ ] **Frontend calls service endpoints** - I did not complete this part of the deliverable.
-- [ ] **Supports registration, login, logout, and restricted endpoint** - I did not complete this part of the deliverable.
-- [ ] **Uses BCrypt to hash passwords** - I did not complete this part of the deliverable.
+- [x] I completed the prerequisites for this deliverable (Simon deployed, GitHub link, Git commits)-Simon deployed 11/5, 10+ git commits for this assignment as of 11/6
+- [x] **Node.js/Express HTTP service** - Created a backend for service using express and Node.js
+- [x] **Static middleware for frontend** - Created express static middleware for frontend application files
+- [x] **Calls to third party endpoints** - Calls to TheMealDB.com for a random food image.
+- [x] **Backend service endpoints** - Add authentication endpoint and feed event endpoints.
+- [x] **Frontend calls service endpoints** - Front end calls back end for authentication and for event creation, deletion, and retrieval. 
+- [x] **Supports registration, login, logout, and restricted endpoint** - All of these functions are supported and protected by middleware.
+- [x] **Uses BCrypt to hash passwords** - Bcrypt is used for password encryption for storage and login.
 
 ## 🚀 DB deliverable
 
