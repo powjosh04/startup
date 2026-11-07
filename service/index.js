@@ -8,6 +8,8 @@ const apiRouter = express.Router();
 
 const port = process.argv.length > 2 ? process.argv[2] : 4000;
 
+app.use(express.json());
+app.use(cookieParser());
 app.use(express.static('public'));
 
 app.use('/api', apiRouter);
@@ -115,10 +117,12 @@ apiRouter.delete('/auth/logout', async (req, res) => {
 
 //Authorization middleware
 const verifyAuth = async (req, res, next) => {
+  const token = req.cookies?.[authCookieName];
+
   const user = await findUser(
     'token',
-    req.cookies[authCookieName]
-  );
+    token
+    );
 
   if (user) {
     next();
@@ -141,7 +145,7 @@ apiRouter.post('/events', verifyAuth, (req, res) => {
     title: req.body.title,
     description: req.body.description,
     location: req.body.location,
-    imageUrl: req.body.imageUrl,
+    imageUrl: 'placeholder.png',
     createdAt: new Date(),
   };
 
@@ -172,4 +176,8 @@ app.use((_req, res) => {
   res.sendFile('index.html', {
     root: 'public',
   });
+});
+
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
 });

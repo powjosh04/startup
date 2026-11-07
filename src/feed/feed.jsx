@@ -33,10 +33,12 @@ const [posts, setPosts] = React.useState([]);
 //Load posts from backend
 async function loadEvents() {
   try {
-    const response = await fetch('/api/events', {
+    const response = await fetch('http://localhost:4000/api/events', {
       credentials: 'include',
     });
 
+
+    console.log(response.status);
     const events = await response.json();
 
     setPosts(events);
@@ -53,7 +55,7 @@ React.useEffect(() => {
 //Remove post
 async function removePost(id) {
   try {
-    await fetch(`/api/events/${id}`, {
+    await fetch(`http://localhost:4000/api/events/${id}`, {
       method: 'DELETE',
       credentials: 'include',
     });
@@ -79,7 +81,7 @@ async function handleAddEvent(e) {
   e.preventDefault();
 
   try {
-    const response = await fetch('/api/events', {
+    const response = await fetch('http://localhost:4000/api/events', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -160,7 +162,7 @@ async function handleAddEvent(e) {
           </h3>
 
           <img
-            src={post.image}
+            src={post.imageUrl}
             alt={post.title}
             className="img-fluid rounded mb-3"
           />
