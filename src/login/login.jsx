@@ -9,18 +9,86 @@ export function Login({ setCurrentUser }) {
 
   const storedUser = localStorage.getItem('username');
 
-  function handleSubmit(e) {
+  //Handle login form submission
+async function handleSubmit(e) {
   e.preventDefault();
 
-  localStorage.setItem('username', username);
+  try {
+    const response = await fetch(
+      '/api/auth/login',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        credentials: 'include',
+        body: JSON.stringify({
+          email: username,
+          password,
+        }),
+      }
+    );
 
-  setCurrentUser(username);
+    if (response.ok) {
+      setCurrentUser(username);
+      localStorage.setItem('username', username);
 
-  navigate('/feed');
+      navigate('/feed');
+    } else {
+      alert('Invalid username or password');
+    }
+  } catch (error) {
+    console.error(error);
+  }
 }
 
+//CREATE account functionality
+async function createAccount() {
+  console.log('Create Account clicked');
+  try {
+    const response = await fetch(
+      '/api/auth/create',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        credentials: 'include',
+        body: JSON.stringify({
+          email: username,
+          password,
+        }),
+      }
+    );
 
-  function handleLogout() {
+    console.log('response status:', response.status);
+
+    if (response.ok) {
+      setCurrentUser(username);
+      localStorage.setItem('username', username);
+
+      navigate('/feed');
+    } else {
+      alert('Account already exists');
+    }
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+async function handleLogout() {
+  try {
+    await fetch(
+      '/api/auth/logout',
+      {
+        method: 'DELETE',
+        credentials: 'include',
+      }
+    );
+  } catch (error) {
+    console.error(error);
+  }
+
   localStorage.removeItem('username');
 
   setCurrentUser(null);
@@ -104,6 +172,13 @@ export function Login({ setCurrentUser }) {
           >
             Login
           </button>
+          <button
+          type="button"
+          className="btn btn-success w-100 mt-2"
+          onClick={createAccount}
+          >
+  Create Account
+</button>
         </form>
       </section>
     </div>

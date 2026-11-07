@@ -33,7 +33,7 @@ const [posts, setPosts] = React.useState([]);
 //Load posts from backend
 async function loadEvents() {
   try {
-    const response = await fetch('http://localhost:4000/api/events', {
+    const response = await fetch( '/api/events', {
       credentials: 'include',
     });
 
@@ -55,7 +55,7 @@ React.useEffect(() => {
 //Remove post
 async function removePost(id) {
   try {
-    await fetch(`http://localhost:4000/api/events/${id}`, {
+    await fetch(`/api/events/${id}`, {
       method: 'DELETE',
       credentials: 'include',
     });
@@ -81,7 +81,7 @@ async function handleAddEvent(e) {
   e.preventDefault();
 
   try {
-    const response = await fetch('http://localhost:4000/api/events', {
+    const response = await fetch( '/api/events', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
