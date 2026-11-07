@@ -36,16 +36,13 @@ React.useEffect(() => {
       </p>
     </section>
 
-    {/* API PLACEHOLDER */}
+    {/* 3rd party API  */}
     <section className="text-center">
       <img 
         src={imageUrl}
         alt="Random food placeholder"
         className="img-fluid rounded shadow mb-3"
       />
-      <p className="text-muted">
-        Example image that will be replaced by Foodish API results.
-      </p>
     </section>
 
   </div>
