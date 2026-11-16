@@ -21,3 +21,15 @@ module.exports = {
   userCollection,
 };
 
+//Database helpers
+async function addEvent(event) {
+  await eventCollection.insertOne(event);
+}
+
+async function getEvents() {
+  return eventCollection.find({}).toArray();
+}
+
+async function removeEvent(id) {
+  await eventCollection.deleteOne({ id });
+}
