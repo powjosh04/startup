@@ -5,9 +5,14 @@ const uuid = require('uuid');
 
 const app = express();
 const apiRouter = express.Router();
+const upload = multer({
+  storage: multer.memoryStorage(),
+});
 
 const port = process.argv.length > 2 ? process.argv[2] : 4000;
 const DB = require('./database');
+const multer = require('multer');
+const storage = require('./storage');
 
 app.use(express.json());
 app.use(cookieParser());
@@ -25,6 +30,35 @@ function setAuthCookie(res, authToken) {
     sameSite: 'strict',
   });
 }
+
+apiRouter.post(
+  '/upload',
+  verifyAuth,
+  upload.single('image'),
+  async (req, res) => {
+    try {
+      const fileName =
+        `${uuid.v4()}-${req.file.originalname}`;
+
+      const imageUrl =
+        await storage.uploadImage(
+          req.file.buffer,
+          fileName,
+          req.file.mimetype
+        );
+
+      res.send({
+        imageUrl,
+      });
+    } catch (error) {
+      console.error(error);
+
+      res.status(500).send({
+        msg: 'Upload failed',
+      });
+    }
+  }
+);
 
 // Create a new user
 async function createUser(email, password) {
