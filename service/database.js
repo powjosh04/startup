@@ -29,34 +29,10 @@ async function removeEvent(id) {
   await eventCollection.deleteOne({ id });
 }
 
-//Create events
-app.post('/api/events', async (req, res) => {
-  const event = {
-    id: crypto.randomUUID(),
-    ...req.body,
-    createdAt: new Date(),
-  };
-
-  await DB.addEvent(event);
-
-  res.send(event);
-});
-
-//Get events
-app.get('/api/events', async (req, res) => {
-  const events = await DB.getEvents();
-
-  res.send(events);
-});
-
-//delete events
-app.delete('/api/events/:id', async (req, res) => {
-  await DB.removeEvent(req.params.id);
-
-  res.send({ success: true });
-});
-
 module.exports = {
+  addEvent,
+  getEvents,
+  removeEvent,
   eventCollection,
   userCollection,
 };
