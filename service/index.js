@@ -7,6 +7,7 @@ const app = express();
 const apiRouter = express.Router();
 
 const port = process.argv.length > 2 ? process.argv[2] : 4000;
+const DB = require('./database');
 
 app.use(express.json());
 app.use(cookieParser());
@@ -130,12 +131,14 @@ const verifyAuth = async (req, res, next) => {
 };
 
 //Get food events endpoint
-apiRouter.get('/events', verifyAuth, (req, res) => {
-  res.send(foodEvents);
+apiRouter.get('/events', verifyAuth, async (req, res) => {
+  const events = await DB.getEvents();
+
+  res.send(events);
 });
 
 //create food event endpoint
-apiRouter.post('/events', verifyAuth, (req, res) => {
+apiRouter.post('/events', verifyAuth, async (req, res) => {
   const event = {
     id: uuid.v4(),
     title: req.body.title,
@@ -145,16 +148,14 @@ apiRouter.post('/events', verifyAuth, (req, res) => {
     createdAt: new Date(),
   };
 
-  foodEvents.push(event);
+  await DB.addEvent(event);
 
   res.send(event);
 });
 
 //delete food event endpoint
-apiRouter.delete('/events/:id', verifyAuth, (req, res) => {
-  foodEvents = foodEvents.filter(
-    (event) => event.id !== req.params.id
-  );
+apiRouter.delete('/events/:id', verifyAuth, async (req, res) => {
+  await DB.removeEvent(req.params.id);
 
   res.status(204).end();
 });
