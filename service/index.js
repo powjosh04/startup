@@ -36,14 +36,22 @@ async function createUser(email, password) {
     token: uuid.v4(),
   };
 
-  users.push(user);
+  await DB.addUser(user);
 
   return user;
 }
 
 //Find user
 async function findUser(field, value) {
-  return users.find((user) => user[field] === value);
+  if (field === 'email') {
+    return DB.getUser(value);
+  }
+
+  if (field === 'token') {
+    return DB.getUserByToken(value);
+  }
+
+  return null;
 }
 
 //Create account endpoint
@@ -80,9 +88,11 @@ apiRouter.post('/auth/login', async (req, res) => {
       user.password
     ))
   ) {
-    user.token = uuid.v4();
+   user.token = uuid.v4();
 
-    setAuthCookie(res, user.token);
+await DB.updateUser(user);
+
+setAuthCookie(res, user.token);
 
     res.send({
       email: user.email,
@@ -104,7 +114,7 @@ apiRouter.delete('/auth/logout', async (req, res) => {
   );
 
   if (user) {
-    delete user.token;
+    await DB.removeUserToken(user.token);
   }
 
   res.clearCookie(authCookieName);
