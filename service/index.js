@@ -5,13 +5,13 @@ const uuid = require('uuid');
 
 const app = express();
 const apiRouter = express.Router();
+const multer = require('multer');
 const upload = multer({
   storage: multer.memoryStorage(),
 });
 
 const port = process.argv.length > 2 ? process.argv[2] : 4000;
 const DB = require('./database');
-const multer = require('multer');
 const storage = require('./storage');
 
 app.use(express.json());
@@ -31,34 +31,6 @@ function setAuthCookie(res, authToken) {
   });
 }
 
-apiRouter.post(
-  '/upload',
-  verifyAuth,
-  upload.single('image'),
-  async (req, res) => {
-    try {
-      const fileName =
-        `${uuid.v4()}-${req.file.originalname}`;
-
-      const imageUrl =
-        await storage.uploadImage(
-          req.file.buffer,
-          fileName,
-          req.file.mimetype
-        );
-
-      res.send({
-        imageUrl,
-      });
-    } catch (error) {
-      console.error(error);
-
-      res.status(500).send({
-        msg: 'Upload failed',
-      });
-    }
-  }
-);
 
 // Create a new user
 async function createUser(email, password) {
@@ -87,6 +59,24 @@ async function findUser(field, value) {
 
   return null;
 }
+
+//Authorization middleware
+const verifyAuth = async (req, res, next) => {
+  const token = req.cookies?.[authCookieName];
+
+  const user = await findUser(
+    'token',
+    token
+    );
+
+  if (user) {
+    next();
+  } else {
+    res.status(401).send({
+      msg: 'Unauthorized',
+    });
+  }
+};
 
 //Create account endpoint
 apiRouter.post('/auth/create', async (req, res) => {
@@ -156,23 +146,6 @@ apiRouter.delete('/auth/logout', async (req, res) => {
   res.status(204).end();
 });
 
-//Authorization middleware
-const verifyAuth = async (req, res, next) => {
-  const token = req.cookies?.[authCookieName];
-
-  const user = await findUser(
-    'token',
-    token
-    );
-
-  if (user) {
-    next();
-  } else {
-    res.status(401).send({
-      msg: 'Unauthorized',
-    });
-  }
-};
 
 //Get food events endpoint
 apiRouter.get('/events', verifyAuth, async (req, res) => {
@@ -222,3 +195,32 @@ app.use((_req, res) => {
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
+
+apiRouter.post(
+  '/upload',
+  verifyAuth,
+  upload.single('image'),
+  async (req, res) => {
+    try {
+      const fileName =
+        `${uuid.v4()}-${req.file.originalname}`;
+
+      const imageUrl =
+        await storage.uploadImage(
+          req.file.buffer,
+          fileName,
+          req.file.mimetype
+        );
+
+      res.send({
+        imageUrl,
+      });
+    } catch (error) {
+      console.error(error);
+
+      res.status(500).send({
+        msg: 'Upload failed',
+      });
+    }
+  }
+);
