@@ -16,11 +16,6 @@ const userCollection = db.collection('users');
   console.log('Connected to MongoDB');
 })();
 
-module.exports = {
-  eventCollection,
-  userCollection,
-};
-
 //Database helpers
 async function addEvent(event) {
   await eventCollection.insertOne(event);
@@ -60,3 +55,8 @@ app.delete('/api/events/:id', async (req, res) => {
 
   res.send({ success: true });
 });
+
+module.exports = {
+  eventCollection,
+  userCollection,
+};

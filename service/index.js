@@ -14,10 +14,6 @@ app.use(express.static('public'));
 
 app.use('/api', apiRouter);
 
-//Temporary in-memory storage for users and food events
-const users = [];
-let foodEvents = [];
-
 //Cookie configuration
 const authCookieName = 'token';
 
