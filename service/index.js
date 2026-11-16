@@ -188,7 +188,7 @@ apiRouter.post('/events', verifyAuth, async (req, res) => {
     title: req.body.title,
     description: req.body.description,
     location: req.body.location,
-    imageUrl: 'placeholder.png',
+    imageUrl: req.body.imageUrl,
     createdAt: new Date(),
   };
 

@@ -1,7 +1,7 @@
 const { S3Client, PutObjectCommand } = require('@aws-sdk/client-s3');
 
 const s3 = new S3Client({
-  region: 'us-east-1', // change if your bucket is elsewhere
+  region: 'us-east-1',
 });
 
 async function uploadImage(fileBuffer, fileName, mimeType) {

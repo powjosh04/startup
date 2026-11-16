@@ -198,21 +198,41 @@ async function handleAddEvent(e) {
           {/* Will be replaced with actual image upload functionality later */}
             <div className="mb-3">
               <label htmlFor="event-image" className="form-label fw-medium">Upload Image:</label>
-             <input
-                type="file"
-                id="event-image"
-                name="event-image"
-                accept="image/*"
-                required
-                className="form-control"
-                onChange={(e) => {
-                const file = e.target.files[0];
+    <input
+  type="file"
+  id="event-image"
+  name="event-image"
+  accept="image/*"
+  required
+  className="form-control"
+  onChange={async (e) => {
+    const file = e.target.files[0];
 
-                if (file) {
-                  setImage(URL.createObjectURL(file));
-                }
-              }}
-            />
+    if (!file) {
+      return;
+    }
+
+    try {
+      const formData = new FormData();
+
+      formData.append('image', file);
+
+      const response = await fetch('/api/upload', {
+        method: 'POST',
+        credentials: 'include',
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      setImage(data.imageUrl);
+
+      console.log('Uploaded:', data.imageUrl);
+    } catch (error) {
+      console.error('Upload failed', error);
+    }
+  }}
+/>
             </div>
 
             <div className="mb-3">
