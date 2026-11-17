@@ -17,6 +17,24 @@ async function uploadImage(fileBuffer, fileName, mimeType) {
   return `https://student-sustenance-images.s3.amazonaws.com/${fileName}`;
 }
 
+const {
+  S3Client,
+  PutObjectCommand,
+  DeleteObjectCommand,
+} = require('@aws-sdk/client-s3');
+
+async function deleteImage(imageUrl) {
+  const key = imageUrl.split('/').pop();
+
+  await s3.send(
+    new DeleteObjectCommand({
+      Bucket: 'student-sustenance-images',
+      Key: key,
+    })
+  );
+}
+
 module.exports = {
   uploadImage,
+  deleteImage,
 };

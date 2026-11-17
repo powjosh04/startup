@@ -64,6 +64,10 @@ async function removeEvent(id) {
   await eventCollection.deleteOne({ id });
 }
 
+function getEvent(id) {
+  return eventCollection.findOne({ id });
+}
+
 module.exports = {
   getUser,
   getUserByToken,

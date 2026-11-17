@@ -172,6 +172,12 @@ apiRouter.post('/events', verifyAuth, async (req, res) => {
 
 //delete food event endpoint
 apiRouter.delete('/events/:id', verifyAuth, async (req, res) => {
+  const event = await DB.getEvent(req.params.id);
+
+  if (event?.imageUrl) {
+    await storage.deleteImage(event.imageUrl);
+  }
+
   await DB.removeEvent(req.params.id);
 
   res.status(204).end();
