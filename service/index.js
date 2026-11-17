@@ -25,10 +25,10 @@ const authCookieName = 'token';
 
 function setAuthCookie(res, authToken) {
   res.cookie(authCookieName, authToken, {
-    secure: false, // change to true in production
-    httpOnly: true,
-    sameSite: 'strict',
-  });
+  secure: process.env.NODE_ENV === 'production',
+  httpOnly: true,
+  sameSite: 'strict',
+});
 }
 
 
